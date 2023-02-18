@@ -10,7 +10,7 @@ import Kingfisher
 
 extension UIImageView{
     
-    func setImageFromRemoteUrl(url:String, placeholderImage:String = "", downsamplingSize:CGSize? = nil, completion: ((RetrieveImageResult?) -> Void)? = nil){
+    func setImageFromRemoteUrl(url:String, placeholderImage:String = "NoImage", downsamplingSize:CGSize? = nil, completion: ((RetrieveImageResult?) -> Void)? = nil){
         
         var placeholder:UIImage?
         if placeholderImage != "", let image = UIImage.init(named: placeholderImage){

@@ -32,6 +32,8 @@ class HomeVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
+
         self.CallAPI()
 
         self.LocationSetup()
@@ -181,6 +183,27 @@ class HomeVC: BaseVC {
  
     
 }
+//MARK: - set map for location
+
+extension HomeVC:GMSMapViewDelegate
+{
+//    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+//        debugPrint(#function)
+//
+//        return true
+//    }
+    func mapView(_ mapView: GMSMapView, didTap overlay: GMSOverlay) {
+        debugPrint(#function)
+
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        debugPrint(#function)
+        debugPrint(marker.title)
+        //debugPrint(marker.value(forKey: ApiKey.kId))
+
+    }
+}
 //MARK: - Get current location
 
 extension HomeVC: CLLocationManagerDelegate
@@ -241,7 +264,7 @@ extension HomeVC: CLLocationManagerDelegate
             CURRENTLAT=location.coordinate.latitude
             CURRENTLONG=location.coordinate.longitude
             
-            let camera = GMSCameraPosition.camera(withLatitude: CURRENTLAT, longitude: CURRENTLONG, zoom: 17.0)
+            let camera = GMSCameraPosition.camera(withLatitude: CURRENTLAT, longitude: CURRENTLONG, zoom: 12.0)
 
             let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: CURRENTLAT, longitude: CURRENTLONG))
             marker.title = "Current Location"//location.description
@@ -283,8 +306,31 @@ extension HomeVC
                 
                 let count = HomeVM.shared.homeUserList
                 debugPrint("Total user count =  \(count.count)")
+                self.showAllMarker()
             }
         })
+    }
+    
+    //MARK: =  Show all marker
+    func showAllMarker()
+    {
+        for i  in 0..<HomeVM.shared.homeUserList.count
+        {
+            let dict = HomeVM.shared.homeUserList[i]
+            
+            let lat = dict.latitude ?? "30.323"
+            let lang = dict.longitude ?? "76.323"
+            
+            let camera = GMSCameraPosition.camera(withLatitude: Double(lat)!, longitude: Double(lang)!, zoom: 12.0)
+            
+            let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(lang)!))
+            marker.title = dict.name
+            
+            //marker.setValue("\(i)", forKey: ApiKey.kId)
+
+            marker.map = self.mapView
+            self.mapView.animate(to: camera)
+        }
     }
 }
 
