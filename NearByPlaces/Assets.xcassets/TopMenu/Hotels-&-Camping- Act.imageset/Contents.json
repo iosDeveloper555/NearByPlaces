@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Hotels-&-Camping- Act.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Hotels-&-Camping- Activate.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Hotels-&-Camping- Activate 1.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

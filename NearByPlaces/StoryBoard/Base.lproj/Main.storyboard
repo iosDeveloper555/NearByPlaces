@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fpF-qL-Wkg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-SemiBold.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="NearByPlaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrd-aG-ASn">
+                                <rect key="frame" x="0.0" y="-20" width="414" height="946"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SSo-2b-kGc">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="946"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="wOD-XT-CwW">
+                                            <size key="itemSize" width="0.0" height="0.0"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3TT-zN-3CM">
+                                        <rect key="frame" x="20" y="826" width="374" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdZ-S8-MyN">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="UuR-xD-kAt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Skip">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="skipBtnOutlet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zro-4C-Qzw"/>
+                                                </connections>
+                                            </button>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="tgw-3q-mYq">
+                                                <rect key="frame" x="127" y="0.0" width="120" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="oHO-eb-cl2"/>
+                                                </constraints>
+                                                <color key="pageIndicatorTintColor" red="0.92549019607843142" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="currentPageIndicatorTintColor" name="NewAppColor"/>
+                                            </pageControl>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkf-7C-NY2">
+                                                <rect key="frame" x="324" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="O3r-4d-MNk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Next">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="nextBtnOutlet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XUF-zD-UNg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="nkf-7C-NY2" firstAttribute="top" secondItem="3TT-zN-3CM" secondAttribute="top" id="BJy-ca-Tnz"/>
+                                            <constraint firstAttribute="bottom" secondItem="nkf-7C-NY2" secondAttribute="bottom" id="F9b-x9-oKV"/>
+                                            <constraint firstAttribute="trailing" secondItem="nkf-7C-NY2" secondAttribute="trailing" id="GLL-SI-PFY"/>
+                                            <constraint firstItem="WdZ-S8-MyN" firstAttribute="leading" secondItem="3TT-zN-3CM" secondAttribute="leading" id="LGE-RB-MMc"/>
+                                            <constraint firstAttribute="bottom" secondItem="tgw-3q-mYq" secondAttribute="bottom" id="cNr-Lr-e6n"/>
+                                            <constraint firstAttribute="height" constant="50" id="e50-3g-yxU"/>
+                                            <constraint firstAttribute="bottom" secondItem="WdZ-S8-MyN" secondAttribute="bottom" id="nHo-Cp-4Tb"/>
+                                            <constraint firstItem="tgw-3q-mYq" firstAttribute="centerY" secondItem="WdZ-S8-MyN" secondAttribute="centerY" id="udp-Tg-Z93"/>
+                                            <constraint firstItem="WdZ-S8-MyN" firstAttribute="top" secondItem="3TT-zN-3CM" secondAttribute="top" id="wAT-E6-mZ5"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3TT-zN-3CM" secondAttribute="trailing" constant="20" id="LQu-Yo-M1y"/>
+                                    <constraint firstAttribute="bottom" secondItem="3TT-zN-3CM" secondAttribute="bottom" constant="70" id="R1l-IE-eDb"/>
+                                    <constraint firstAttribute="trailing" secondItem="SSo-2b-kGc" secondAttribute="trailing" id="sho-cO-Soj"/>
+                                    <constraint firstItem="3TT-zN-3CM" firstAttribute="leading" secondItem="rrd-aG-ASn" secondAttribute="leading" constant="20" id="t56-YL-gK9"/>
+                                    <constraint firstItem="SSo-2b-kGc" firstAttribute="top" secondItem="rrd-aG-ASn" secondAttribute="top" id="tMB-3c-ZXz"/>
+                                    <constraint firstItem="SSo-2b-kGc" firstAttribute="leading" secondItem="rrd-aG-ASn" secondAttribute="leading" id="xZO-Pt-zLI"/>
+                                    <constraint firstAttribute="bottom" secondItem="SSo-2b-kGc" secondAttribute="bottom" id="zI5-9v-siM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tgw-3q-mYq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5f4-FW-uHH"/>
+                            <constraint firstItem="rrd-aG-ASn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-20" id="CMh-45-Cmb"/>
+                            <constraint firstAttribute="bottom" secondItem="rrd-aG-ASn" secondAttribute="bottom" constant="-30" id="K0r-wn-skP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rrd-aG-ASn" secondAttribute="trailing" id="Oi1-mu-XKj"/>
+                            <constraint firstItem="rrd-aG-ASn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jaV-oV-KZp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="T1G-Cn-HPb"/>
+                    <connections>
+                        <outlet property="collectionView" destination="SSo-2b-kGc" id="qQ4-iL-eGc"/>
+                        <outlet property="pagerOutlet" destination="tgw-3q-mYq" id="deU-Jg-3le"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="83.705357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eFl-88-tWH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="fpF-qL-Wkg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PpX-W7-f0c">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7qk-dt-fAB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jxg-nG-ntL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="284" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="NewAppColor">
+            <color red="0.0" green="0.49803921568627452" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
