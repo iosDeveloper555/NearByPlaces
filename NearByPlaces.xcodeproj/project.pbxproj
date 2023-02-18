@@ -30,6 +30,12 @@
 		186A449A29703DE500D9FBE1 /* SettingTCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186A449829703DE500D9FBE1 /* SettingTCell.xib */; };
 		186A449D29704A6B00D9FBE1 /* LegalTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A449B29704A6B00D9FBE1 /* LegalTCell.swift */; };
 		186A449E29704A6B00D9FBE1 /* LegalTCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186A449C29704A6B00D9FBE1 /* LegalTCell.xib */; };
+		1884FD4729A0B95300FBDA71 /* DetailHTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884FD4529A0B95300FBDA71 /* DetailHTCell.swift */; };
+		1884FD4829A0B95300FBDA71 /* DetailHTCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1884FD4629A0B95300FBDA71 /* DetailHTCell.xib */; };
+		1884FD4B29A0B9FA00FBDA71 /* DetailTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884FD4929A0B9FA00FBDA71 /* DetailTitleCell.swift */; };
+		1884FD4C29A0B9FA00FBDA71 /* DetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1884FD4A29A0B9FA00FBDA71 /* DetailTitleCell.xib */; };
+		1884FD4F29A0BC1B00FBDA71 /* DetailDescTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884FD4D29A0BC1B00FBDA71 /* DetailDescTCell.swift */; };
+		1884FD5029A0BC1B00FBDA71 /* DetailDescTCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1884FD4E29A0BC1B00FBDA71 /* DetailDescTCell.xib */; };
 		18BEEC0F299FAFED00B7F36E /* NetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEEC0E299FAFED00B7F36E /* NetworkInterface.swift */; };
 		18BEEC12299FB42B00B7F36E /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEEC11299FB42B00B7F36E /* HomeVM.swift */; };
 		18BEEC14299FB46F00B7F36E /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEEC13299FB46F00B7F36E /* ApiKey.swift */; };
@@ -119,6 +125,12 @@
 		186A449829703DE500D9FBE1 /* SettingTCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTCell.xib; sourceTree = "<group>"; };
 		186A449B29704A6B00D9FBE1 /* LegalTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalTCell.swift; sourceTree = "<group>"; };
 		186A449C29704A6B00D9FBE1 /* LegalTCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LegalTCell.xib; sourceTree = "<group>"; };
+		1884FD4529A0B95300FBDA71 /* DetailHTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHTCell.swift; sourceTree = "<group>"; };
+		1884FD4629A0B95300FBDA71 /* DetailHTCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailHTCell.xib; sourceTree = "<group>"; };
+		1884FD4929A0B9FA00FBDA71 /* DetailTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTitleCell.swift; sourceTree = "<group>"; };
+		1884FD4A29A0B9FA00FBDA71 /* DetailTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTitleCell.xib; sourceTree = "<group>"; };
+		1884FD4D29A0BC1B00FBDA71 /* DetailDescTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDescTCell.swift; sourceTree = "<group>"; };
+		1884FD4E29A0BC1B00FBDA71 /* DetailDescTCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailDescTCell.xib; sourceTree = "<group>"; };
 		18BEEC0E299FAFED00B7F36E /* NetworkInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkInterface.swift; sourceTree = "<group>"; };
 		18BEEC11299FB42B00B7F36E /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		18BEEC13299FB46F00B7F36E /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
@@ -308,7 +320,6 @@
 			isa = PBXGroup;
 			children = (
 				AA775584294C77FB00408072 /* ListVC.swift */,
-				AA81132A295041A3003DFCC5 /* LocationDetailVC.swift */,
 				AA775586294C807400408072 /* TopStarVC.swift */,
 				AA775588294C80A900408072 /* LocationVC.swift */,
 				184C40032965BB5C005ADE6D /* TabbarVC.swift */,
@@ -343,6 +354,28 @@
 				186A449C29704A6B00D9FBE1 /* LegalTCell.xib */,
 				184A2B5329716A1C009B7DD0 /* ProfileHeadetTCell.swift */,
 				184A2B5429716A1C009B7DD0 /* ProfileHeadetTCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1884FD4329A0B92B00FBDA71 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				1884FD4429A0B93800FBDA71 /* Cell */,
+				AA81132A295041A3003DFCC5 /* LocationDetailVC.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		1884FD4429A0B93800FBDA71 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1884FD4529A0B95300FBDA71 /* DetailHTCell.swift */,
+				1884FD4629A0B95300FBDA71 /* DetailHTCell.xib */,
+				1884FD4929A0B9FA00FBDA71 /* DetailTitleCell.swift */,
+				1884FD4A29A0B9FA00FBDA71 /* DetailTitleCell.xib */,
+				1884FD4D29A0BC1B00FBDA71 /* DetailDescTCell.swift */,
+				1884FD4E29A0BC1B00FBDA71 /* DetailDescTCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -501,6 +534,7 @@
 		AA775581294C75BB00408072 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1884FD4329A0B92B00FBDA71 /* Details */,
 				186A449529703DB700D9FBE1 /* Setting */,
 				180EA20C29668957002D7691 /* BaseVC */,
 				18E473A729667C8300982EED /* Home */,
@@ -595,6 +629,7 @@
 				18F6B7E12966901600403722 /* Montserrat-Italic.ttf in Resources */,
 				18E4739F29667C0B00982EED /* Inter-Light.ttf in Resources */,
 				18E473A429667C0B00982EED /* Inter-ExtraLight.ttf in Resources */,
+				1884FD5029A0BC1B00FBDA71 /* DetailDescTCell.xib in Resources */,
 				18E473A129667C0B00982EED /* Inter-Bold.ttf in Resources */,
 				18F6B7E02966901600403722 /* Montserrat-Regular.ttf in Resources */,
 				18F6B7FB2966937600403722 /* Roboto-Thin.ttf in Resources */,
@@ -613,6 +648,7 @@
 				18F6B7F32966937600403722 /* Roboto-Regular.ttf in Resources */,
 				18F6B7FC2966937600403722 /* Roboto-Black.ttf in Resources */,
 				18F6B7F92966937600403722 /* Roboto-BlackItalic.ttf in Resources */,
+				1884FD4C29A0B9FA00FBDA71 /* DetailTitleCell.xib in Resources */,
 				AA775575294C420500408072 /* Main.storyboard in Resources */,
 				18F6B7DD2966901600403722 /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				18E4739E29667C0B00982EED /* Inter-Medium.ttf in Resources */,
@@ -631,6 +667,7 @@
 				18F6B7DE2966901600403722 /* Montserrat-ExtraBold.ttf in Resources */,
 				18F6B7D72966901600403722 /* Montserrat-ExtraLight.ttf in Resources */,
 				186A449E29704A6B00D9FBE1 /* LegalTCell.xib in Resources */,
+				1884FD4829A0B95300FBDA71 /* DetailHTCell.xib in Resources */,
 				18E473A029667C0B00982EED /* Inter-Thin.ttf in Resources */,
 				18F6B7E32966901600403722 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
 				18F6B7D92966901600403722 /* Montserrat-Bold.ttf in Resources */,
@@ -712,6 +749,7 @@
 				AA77558B294C80BF00408072 /* SettingVC.swift in Sources */,
 				18BEEC1B299FC5F200B7F36E /* UIImage+Extension.swift in Sources */,
 				18BEEC19299FBA9200B7F36E /* HomeModel.swift in Sources */,
+				1884FD4B29A0B9FA00FBDA71 /* DetailTitleCell.swift in Sources */,
 				186A449D29704A6B00D9FBE1 /* LegalTCell.swift in Sources */,
 				18BEEC14299FB46F00B7F36E /* ApiKey.swift in Sources */,
 				184C3FFF2965AD50005ADE6D /* IntrollCCell.swift in Sources */,
@@ -729,9 +767,11 @@
 				184A2B5529716A1D009B7DD0 /* ProfileHeadetTCell.swift in Sources */,
 				184C3FED2965AC5E005ADE6D /* String+Extension.swift in Sources */,
 				AA775583294C75E300408072 /* HomeVC.swift in Sources */,
+				1884FD4F29A0BC1B00FBDA71 /* DetailDescTCell.swift in Sources */,
 				18BEEC12299FB42B00B7F36E /* HomeVM.swift in Sources */,
 				AA81132B295041A3003DFCC5 /* LocationDetailVC.swift in Sources */,
 				18595CE72971777A00A3A6BE /* UIColor.swift in Sources */,
+				1884FD4729A0B95300FBDA71 /* DetailHTCell.swift in Sources */,
 				184C40042965BB5C005ADE6D /* TabbarVC.swift in Sources */,
 				18595CE52971767C00A3A6BE /* HighlightedButton.swift in Sources */,
 				AA77556E294C420500408072 /* AppDelegate.swift in Sources */,

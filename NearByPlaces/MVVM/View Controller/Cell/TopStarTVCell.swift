@@ -9,6 +9,7 @@ import UIKit
 
 class TopStarTVCell: UITableViewCell {
 
+    @IBOutlet weak var lblDesc: UILabel!
     @IBOutlet weak var titleLblOutlet: UILabel!
     
     @IBOutlet weak var imgOutlet: UIImageView!

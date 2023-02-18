@@ -41,7 +41,7 @@ class SettingVC: UIViewController {
     }
 }
 
-//MARK:  -
+//MARK:  - UITableViewDelegate
 extension SettingVC:UITableViewDelegate,UITableViewDataSource
 {
   

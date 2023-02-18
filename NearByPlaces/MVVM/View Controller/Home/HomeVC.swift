@@ -183,6 +183,64 @@ class HomeVC: BaseVC {
  
     
 }
+
+// MARK: - getHomeAPI Api Calls
+
+extension HomeVC
+{
+    func CallAPI(type:String=TYPE_ALL)
+    {
+        if Connectivity.isConnectedToInternet {
+            var data = JSONDictionary()
+            data[ApiKey.kType] = type
+            self.getHomeAPI(data: data)
+        } else {
+            
+            self.openSimpleAlert(message: APIManager.INTERNET_ERROR)
+        }
+    }
+    func getHomeAPI(data:JSONDictionary)
+    {
+        HomeVM.shared.callApiForHomeData(data: data, response: { (message, error) in
+            
+            if error != nil
+            {
+                self.showErrorMessage(error: error)
+            }
+            else{
+                
+                let count = HomeVM.shared.homeUserList
+                debugPrint("Total user count =  \(count.count)")
+                self.showAllMarker()
+            }
+        })
+    }
+    
+    //MARK: =  Show all marker
+    func showAllMarker()
+    {
+        mapView.clear()
+
+        for i  in 0..<HomeVM.shared.homeUserList.count
+        {
+            let dict = HomeVM.shared.homeUserList[i]
+            
+            let lat = dict.latitude ?? "30.323"
+            let lang = dict.longitude ?? "76.323"
+            
+            let camera = GMSCameraPosition.camera(withLatitude: Double(lat)!, longitude: Double(lang)!, zoom: 12.0)
+            
+            let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(lang)!))
+            marker.title = dict.name
+            marker.snippet = dict.address
+            marker.userData = [ApiKey.kId:i]
+            //marker.setValue("\(i)", forKey: ApiKey.kId)
+
+            marker.map = self.mapView
+            self.mapView.animate(to: camera)
+        }
+    }
+}
 //MARK: - set map for location
 
 extension HomeVC:GMSMapViewDelegate
@@ -200,10 +258,23 @@ extension HomeVC:GMSMapViewDelegate
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         debugPrint(#function)
         debugPrint(marker.title)
+        debugPrint(marker.userData)
+        
+        if let dict = marker.userData as? JSONDictionary, let index = dict[ApiKey.kId] as? Int
+        {
+           if  HomeVM.shared.homeUserList.count>index
+            {
+              let vc = LocationDetailVC.instantiate(fromAppStoryboard: .Tabbar)
+               vc.locationDetail=HomeVM.shared.homeUserList[index]
+               self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+
         //debugPrint(marker.value(forKey: ApiKey.kId))
 
     }
 }
+
 //MARK: - Get current location
 
 extension HomeVC: CLLocationManagerDelegate
@@ -279,58 +350,3 @@ extension HomeVC: CLLocationManagerDelegate
         print("Failed to find user's location: \(error.localizedDescription)")
     }
 }
-// MARK: - getHomeAPI Api Calls
-
-extension HomeVC
-{
-    func CallAPI(type:String=TYPE_ALL)
-    {
-        if Connectivity.isConnectedToInternet {
-            var data = JSONDictionary()
-            data[ApiKey.kType] = type
-            self.getHomeAPI(data: data)
-        } else {
-            
-            self.openSimpleAlert(message: APIManager.INTERNET_ERROR)
-        }
-    }
-    func getHomeAPI(data:JSONDictionary)
-    {
-        HomeVM.shared.callApiForHomeData(data: data, response: { (message, error) in
-            
-            if error != nil
-            {
-                self.showErrorMessage(error: error)
-            }
-            else{
-                
-                let count = HomeVM.shared.homeUserList
-                debugPrint("Total user count =  \(count.count)")
-                self.showAllMarker()
-            }
-        })
-    }
-    
-    //MARK: =  Show all marker
-    func showAllMarker()
-    {
-        for i  in 0..<HomeVM.shared.homeUserList.count
-        {
-            let dict = HomeVM.shared.homeUserList[i]
-            
-            let lat = dict.latitude ?? "30.323"
-            let lang = dict.longitude ?? "76.323"
-            
-            let camera = GMSCameraPosition.camera(withLatitude: Double(lat)!, longitude: Double(lang)!, zoom: 12.0)
-            
-            let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(lang)!))
-            marker.title = dict.name
-            
-            //marker.setValue("\(i)", forKey: ApiKey.kId)
-
-            marker.map = self.mapView
-            self.mapView.animate(to: camera)
-        }
-    }
-}
-

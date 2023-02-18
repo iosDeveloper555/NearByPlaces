@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailDescTCell" rowHeight="154" id="KGk-i7-Jjw" customClass="DetailDescTCell" customModule="NearByPlaces" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="154"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="154"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ozl-c1-h5j">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="154"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beschreibung:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ija-hc-T5S">
+                                <rect key="frame" x="20" y="0.0" width="310" height="19.666666666666668"/>
+                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4Z-us-eWN">
+                                <rect key="frame" x="20" y="35.666666666666664" width="310" height="110.33333333333334"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do e" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ubB-Zm-S2N">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="110.33333333333333"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" red="0.40784313725490196" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ubB-Zm-S2N" secondAttribute="bottom" id="AHI-OV-gOI"/>
+                                    <constraint firstItem="ubB-Zm-S2N" firstAttribute="top" secondItem="T4Z-us-eWN" secondAttribute="top" id="WfB-V0-TTt"/>
+                                    <constraint firstItem="ubB-Zm-S2N" firstAttribute="leading" secondItem="T4Z-us-eWN" secondAttribute="leading" id="rBV-YM-X7a"/>
+                                    <constraint firstAttribute="trailing" secondItem="ubB-Zm-S2N" secondAttribute="trailing" id="u2M-iU-M92"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="T4Z-us-eWN" secondAttribute="bottom" constant="8" id="Del-F9-W6l"/>
+                            <constraint firstItem="Ija-hc-T5S" firstAttribute="leading" secondItem="Ozl-c1-h5j" secondAttribute="leading" constant="20" symbolic="YES" id="FTI-wS-Y17"/>
+                            <constraint firstItem="T4Z-us-eWN" firstAttribute="trailing" secondItem="Ija-hc-T5S" secondAttribute="trailing" id="Tx9-6o-sBr"/>
+                            <constraint firstItem="T4Z-us-eWN" firstAttribute="top" secondItem="Ija-hc-T5S" secondAttribute="bottom" constant="16" id="XNZ-eY-4p3"/>
+                            <constraint firstAttribute="trailing" secondItem="Ija-hc-T5S" secondAttribute="trailing" constant="20" id="azw-lz-OI6"/>
+                            <constraint firstItem="T4Z-us-eWN" firstAttribute="leading" secondItem="Ija-hc-T5S" secondAttribute="leading" id="gA9-f1-SJ4"/>
+                            <constraint firstItem="Ija-hc-T5S" firstAttribute="top" secondItem="Ozl-c1-h5j" secondAttribute="top" id="kZw-Le-CNG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Ozl-c1-h5j" secondAttribute="trailing" id="3bg-uH-wcM"/>
+                    <constraint firstItem="Ozl-c1-h5j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WJj-AA-8UB"/>
+                    <constraint firstAttribute="bottom" secondItem="Ozl-c1-h5j" secondAttribute="bottom" id="Woj-gk-Y2L"/>
+                    <constraint firstItem="Ozl-c1-h5j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="y3E-aa-Hx6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="textDesc" destination="ubB-Zm-S2N" id="1Kh-qB-9bl"/>
+            </connections>
+            <point key="canvasLocation" x="117.55725190839694" y="37.323943661971832"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

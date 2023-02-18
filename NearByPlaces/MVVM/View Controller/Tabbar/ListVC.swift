@@ -174,6 +174,7 @@ else{
         
         cell.addressLbl.text=cellData.name
         cell.addressLocationLbl.text=cellData.address
+        cell.kmLbl.text = self.getDistanceInKM(lat: cellData.latitude, lang: cellData.longitude)
 
         
         return cell

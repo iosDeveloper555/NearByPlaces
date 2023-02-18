@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class BaseVC: UIViewController {
 
@@ -138,6 +139,24 @@ class BaseVC: UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default))
         self.present(alert, animated: true)
+    }
+    
+    func getDistanceInKM(lat:String?,lang:String?) -> String
+    {
+        let lat = lat ?? "30.323"
+        let lang = lang ?? "76.323"
+        
+        let myLocation = CLLocation(latitude: CURRENTLAT, longitude: CURRENTLONG)
+
+        //My buddy's location
+        let myBuddysLocation = CLLocation(latitude: Double(lat)!, longitude: Double(lang)!)
+
+        //Measuring my distance to my buddy's (in km)
+        let distance = myLocation.distance(from: myBuddysLocation) / 1000
+
+        //Display the result in km
+        print(String(format: "%.01fkm", distance))
+        return String(format: "%.01fkm", distance)
     }
     
 }
