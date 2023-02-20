@@ -15,4 +15,5 @@ target 'NearByPlaces' do
   pod 'GoogleMaps'
   #     pod 'Cosmos'
   pod 'Kingfisher', '~> 7.0'
+  pod 'FloatRatingView', '~> 4'
 end

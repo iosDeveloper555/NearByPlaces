@@ -10,19 +10,24 @@ import Kingfisher
 
 extension UIImageView{
     
-    func setImageFromRemoteUrl(url:String, placeholderImage:String = "NoImage", downsamplingSize:CGSize? = nil, completion: ((RetrieveImageResult?) -> Void)? = nil){
+    func setImageFromRemoteUrl(type:imageType = .Local,url:String, placeholderImage:String = "NoImage", downsamplingSize:CGSize? = nil, completion: ((RetrieveImageResult?) -> Void)? = nil){
         
         var placeholder:UIImage?
         if placeholderImage != "", let image = UIImage.init(named: placeholderImage){
             placeholder = image
         }
+        var url2 = URL.init(string: IMAGE_BASE_URL+url)
+
+        if type == .Google
+        {
+            url2 = URL.init(string: url)
+        }
         
-        let url = URL.init(string: IMAGE_BASE_URL+url)
         let processor = DownsamplingImageProcessor(size: downsamplingSize ?? self.bounds.size)
             |> RoundCornerImageProcessor(cornerRadius: 0)
         self.kf.indicatorType = .activity
         self.kf.setImage(
-            with: url,
+            with: url2,
             placeholder: placeholder == nil ? UIImage() : placeholder!,
             options: [
                 .processor(processor),
@@ -42,4 +47,11 @@ extension UIImageView{
             }
         }
     }
+}
+
+enum imageType:String
+{
+    case Google = "google"
+   case Local = "local"
+
 }

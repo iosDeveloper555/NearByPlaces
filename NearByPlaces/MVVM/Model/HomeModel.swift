@@ -38,16 +38,3 @@ struct HomeModel
     }
 
 }
-//{
-//           "id": 235,
-//           "country": "italy",
-//           "state": "Campania",
-//           "address": "Traversa Punta Capo, 80067 Sorrento N",
-//           "name": "Bagni Regina Giovanna",
-//           "description": "Es ist ein sehr schöner Strand zum Baden. Es ist ein Geheimtip und unter der Woche sind sehr wenige Leute da.",
-//           "filter": "Hotels  & Camping",
-//           "latitude": "44.1114",
-//           "longitude": "11.2846",
-//           "location image": "",
-//           "top_ten": ""
-//       }

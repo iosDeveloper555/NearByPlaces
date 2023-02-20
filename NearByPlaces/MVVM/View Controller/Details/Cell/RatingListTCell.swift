@@ -6,9 +6,17 @@
 //
 
 import UIKit
+import FloatRatingView
 
 class RatingListTCell: UITableViewCell {
-
+    @IBOutlet weak var lblAccountLink: UILabel!
+    @IBOutlet weak var lblTime: UILabel!
+    
+    @IBOutlet weak var txtDesc: UITextView!
+    @IBOutlet weak var lblReview: UILabel!
+    @IBOutlet weak var viewrating: FloatRatingView!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var imgProfile: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

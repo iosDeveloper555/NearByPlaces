@@ -109,6 +109,7 @@ extension LocationDetailVC:UITableViewDelegate,UITableViewDataSource
     @objc func OpenRating(_ sender:UIButton)
     {
        let vc = RatingListVC.instantiate(fromAppStoryboard: .Tabbar)
+        vc.locationDetail = self.locationDetail
         self.navigationController?.pushViewController(vc, animated: true)
         
     }

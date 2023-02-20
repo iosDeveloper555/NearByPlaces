@@ -42,26 +42,19 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMz-Ic-GJ7">
-                                <rect key="frame" x="68" y="10" width="250" height="21"/>
+                                <rect key="frame" x="68" y="10" width="250" height="22"/>
                                 <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="18"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" fixedFrame="YES" text="Industrial Area,Phase 8" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqe-Zr-APh">
-                                <rect key="frame" x="16" y="143" width="250" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
-                                <color key="textColor" red="0.62352941179999999" green="0.61176470589999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Author Account link" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ih6-Fc-9sj">
-                                <rect key="frame" x="68" y="39" width="250" height="16.333333333333329"/>
+                                <rect key="frame" x="68" y="40" width="250" height="17"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                 <color key="textColor" red="0.62352941179999999" green="0.61176470589999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.0" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUl-yl-PP1">
-                                <rect key="frame" x="16" y="70" width="28" height="16.333333333333329"/>
+                                <rect key="frame" x="16" y="70" width="28" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="28" id="SIj-VZ-CL8"/>
                                 </constraints>
@@ -69,25 +62,34 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCV-6N-PZr">
-                                <rect key="frame" x="52" y="63.333333333333343" width="100" height="30"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCV-6N-PZr" customClass="FloatRatingView" customModule="FloatRatingView">
+                                <rect key="frame" x="52" y="63.666666666666657" width="100" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Rj2-ri-kip"/>
                                     <constraint firstAttribute="height" constant="30" id="kG9-up-oG9"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxRating">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="rating1"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 year ago" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4s-3l-seB">
-                                <rect key="frame" x="160" y="72.333333333333329" width="47.333333333333343" height="11.666666666666671"/>
+                                <rect key="frame" x="160" y="72.333333333333329" width="50" height="12.333333333333329"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="10"/>
                                 <color key="textColor" red="0.62352941179999999" green="0.61176470589999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbU-1h-YYT">
-                                <rect key="frame" x="16" y="109.33333333333333" width="306" height="167.66666666666669"/>
+                                <rect key="frame" x="16" y="109.66666666666667" width="306" height="167.33333333333331"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xfm-9e-yLB">
-                                        <rect key="frame" x="0.0" y="0.0" width="306" height="167.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="306" height="167.33333333333334"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">},
 {
@@ -159,16 +161,23 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgProfile" destination="xu9-3Z-YJL" id="crX-9N-zuN"/>
+                <outlet property="lblAccountLink" destination="Ih6-Fc-9sj" id="yFQ-M2-c9x"/>
+                <outlet property="lblName" destination="sMz-Ic-GJ7" id="f4F-S1-Jbm"/>
+                <outlet property="lblReview" destination="bUl-yl-PP1" id="aM6-Ps-Xwb"/>
+                <outlet property="lblTime" destination="n4s-3l-seB" id="3dH-wK-JuV"/>
+                <outlet property="txtDesc" destination="Xfm-9e-yLB" id="IQ7-oD-Yla"/>
+                <outlet property="viewrating" destination="fCV-6N-PZr" id="hqc-B9-g0s"/>
+            </connections>
             <point key="canvasLocation" x="-24.427480916030532" y="86.267605633802816"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="NoImage" width="1665" height="2048"/>
+        <image name="rating1" width="16" height="14.666666984558105"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

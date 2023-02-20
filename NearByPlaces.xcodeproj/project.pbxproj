@@ -45,6 +45,7 @@
 		18C3EF8829A3AE01002BD5BC /* RatingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3EF8729A3AE01002BD5BC /* RatingListVC.swift */; };
 		18C3EF8B29A3AED3002BD5BC /* RatingListTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3EF8929A3AED3002BD5BC /* RatingListTCell.swift */; };
 		18C3EF8C29A3AED3002BD5BC /* RatingListTCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C3EF8A29A3AED3002BD5BC /* RatingListTCell.xib */; };
+		18C3EF8E29A3C6C7002BD5BC /* RatingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3EF8D29A3C6C7002BD5BC /* RatingModel.swift */; };
 		18E4739E29667C0B00982EED /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E4739529667C0B00982EED /* Inter-Medium.ttf */; };
 		18E4739F29667C0B00982EED /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E4739629667C0B00982EED /* Inter-Light.ttf */; };
 		18E473A029667C0B00982EED /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E4739729667C0B00982EED /* Inter-Thin.ttf */; };
@@ -143,6 +144,7 @@
 		18C3EF8729A3AE01002BD5BC /* RatingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingListVC.swift; sourceTree = "<group>"; };
 		18C3EF8929A3AED3002BD5BC /* RatingListTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingListTCell.swift; sourceTree = "<group>"; };
 		18C3EF8A29A3AED3002BD5BC /* RatingListTCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingListTCell.xib; sourceTree = "<group>"; };
+		18C3EF8D29A3C6C7002BD5BC /* RatingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingModel.swift; sourceTree = "<group>"; };
 		18E4739529667C0B00982EED /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		18E4739629667C0B00982EED /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
 		18E4739729667C0B00982EED /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				18BEEC18299FBA9200B7F36E /* HomeModel.swift */,
+				18C3EF8D29A3C6C7002BD5BC /* RatingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -772,6 +775,7 @@
 				AA775572294C420500408072 /* ViewController.swift in Sources */,
 				AA81133629506A21003DFCC5 /* GrowingTextView.swift in Sources */,
 				184C3FEA2965AC5E005ADE6D /* Date+Extension.swift in Sources */,
+				18C3EF8E29A3C6C7002BD5BC /* RatingModel.swift in Sources */,
 				AA775585294C77FB00408072 /* ListVC.swift in Sources */,
 				AA81133329506608003DFCC5 /* TopStarTVCell.swift in Sources */,
 				184C3FEF2965AC5E005ADE6D /* AppConstant.swift in Sources */,

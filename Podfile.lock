@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.6.2)
   - DropDown (2.3.13)
+  - FloatRatingView (4.0)
   - GoogleMaps (3.1.0):
     - GoogleMaps/Maps (= 3.1.0)
   - GoogleMaps/Base (3.1.0)
@@ -12,6 +13,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - DropDown
+  - FloatRatingView (~> 4)
   - GoogleMaps
   - IQKeyboardManagerSwift
   - Kingfisher (~> 7.0)
@@ -20,6 +22,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - DropDown
+    - FloatRatingView
     - GoogleMaps
     - IQKeyboardManagerSwift
     - Kingfisher
@@ -27,10 +30,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  FloatRatingView: bb6bdddfbeec51b1d387b4bd50abc27b4dfccd48
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
 
-PODFILE CHECKSUM: eb075390b265e0e55262e31b6a1761e4721b0d8f
+PODFILE CHECKSUM: 494d0e147e414b70532da97230676befe0e2272c
 
 COCOAPODS: 1.11.3
