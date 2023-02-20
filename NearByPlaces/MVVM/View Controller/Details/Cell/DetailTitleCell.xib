@@ -183,6 +183,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="btnNavigation" destination="pDx-f2-s0u" id="fBS-dC-Yjf"/>
                 <outlet property="btnRating" destination="7cO-hC-9lI" id="Kh6-t6-vmx"/>
                 <outlet property="lblAddress" destination="7pt-87-aHG" id="HyF-q3-YCq"/>
                 <outlet property="lblName" destination="TSg-xz-BeD" id="lBt-fM-E58"/>

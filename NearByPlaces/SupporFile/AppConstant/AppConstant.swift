@@ -158,6 +158,7 @@ let kProfileHeadetTCell  = "ProfileHeadetTCell"
 let kDetailTitleCell  = "DetailTitleCell"
 let kDetailHTCell  = "DetailHTCell"
 let kDetailDescTCell  = "DetailDescTCell"
+let kRatingListTCell  = "RatingListTCell"
 
 
 

@@ -42,6 +42,9 @@
 		18BEEC17299FB56100B7F36E /* Home+Webservices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEEC16299FB56100B7F36E /* Home+Webservices.swift */; };
 		18BEEC19299FBA9200B7F36E /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEEC18299FBA9200B7F36E /* HomeModel.swift */; };
 		18BEEC1B299FC5F200B7F36E /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEEC1A299FC5F200B7F36E /* UIImage+Extension.swift */; };
+		18C3EF8829A3AE01002BD5BC /* RatingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3EF8729A3AE01002BD5BC /* RatingListVC.swift */; };
+		18C3EF8B29A3AED3002BD5BC /* RatingListTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3EF8929A3AED3002BD5BC /* RatingListTCell.swift */; };
+		18C3EF8C29A3AED3002BD5BC /* RatingListTCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C3EF8A29A3AED3002BD5BC /* RatingListTCell.xib */; };
 		18E4739E29667C0B00982EED /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E4739529667C0B00982EED /* Inter-Medium.ttf */; };
 		18E4739F29667C0B00982EED /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E4739629667C0B00982EED /* Inter-Light.ttf */; };
 		18E473A029667C0B00982EED /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E4739729667C0B00982EED /* Inter-Thin.ttf */; };
@@ -137,6 +140,9 @@
 		18BEEC16299FB56100B7F36E /* Home+Webservices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Webservices.swift"; sourceTree = "<group>"; };
 		18BEEC18299FBA9200B7F36E /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		18BEEC1A299FC5F200B7F36E /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		18C3EF8729A3AE01002BD5BC /* RatingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingListVC.swift; sourceTree = "<group>"; };
+		18C3EF8929A3AED3002BD5BC /* RatingListTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingListTCell.swift; sourceTree = "<group>"; };
+		18C3EF8A29A3AED3002BD5BC /* RatingListTCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingListTCell.xib; sourceTree = "<group>"; };
 		18E4739529667C0B00982EED /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		18E4739629667C0B00982EED /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
 		18E4739729667C0B00982EED /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
@@ -363,6 +369,7 @@
 			children = (
 				1884FD4429A0B93800FBDA71 /* Cell */,
 				AA81132A295041A3003DFCC5 /* LocationDetailVC.swift */,
+				18C3EF8729A3AE01002BD5BC /* RatingListVC.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -376,6 +383,8 @@
 				1884FD4A29A0B9FA00FBDA71 /* DetailTitleCell.xib */,
 				1884FD4D29A0BC1B00FBDA71 /* DetailDescTCell.swift */,
 				1884FD4E29A0BC1B00FBDA71 /* DetailDescTCell.xib */,
+				18C3EF8929A3AED3002BD5BC /* RatingListTCell.swift */,
+				18C3EF8A29A3AED3002BD5BC /* RatingListTCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -639,6 +648,7 @@
 				18F6B7F12966937600403722 /* Roboto-Medium.ttf in Resources */,
 				AA81132D295049C7003DFCC5 /* ListTVCell.xib in Resources */,
 				18F6B7F52966937600403722 /* Roboto-ThinItalic.ttf in Resources */,
+				18C3EF8C29A3AED3002BD5BC /* RatingListTCell.xib in Resources */,
 				18F6B7D62966901600403722 /* Montserrat-ThinItalic.ttf in Resources */,
 				18F6B7E22966901600403722 /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				18F6B7DB2966901600403722 /* Montserrat-BlackItalic.ttf in Resources */,
@@ -751,6 +761,7 @@
 				18BEEC19299FBA9200B7F36E /* HomeModel.swift in Sources */,
 				1884FD4B29A0B9FA00FBDA71 /* DetailTitleCell.swift in Sources */,
 				186A449D29704A6B00D9FBE1 /* LegalTCell.swift in Sources */,
+				18C3EF8829A3AE01002BD5BC /* RatingListVC.swift in Sources */,
 				18BEEC14299FB46F00B7F36E /* ApiKey.swift in Sources */,
 				184C3FFF2965AD50005ADE6D /* IntrollCCell.swift in Sources */,
 				184C3FEB2965AC5E005ADE6D /* UIView+Extension.swift in Sources */,
@@ -766,6 +777,7 @@
 				184C3FEF2965AC5E005ADE6D /* AppConstant.swift in Sources */,
 				184A2B5529716A1D009B7DD0 /* ProfileHeadetTCell.swift in Sources */,
 				184C3FED2965AC5E005ADE6D /* String+Extension.swift in Sources */,
+				18C3EF8B29A3AED3002BD5BC /* RatingListTCell.swift in Sources */,
 				AA775583294C75E300408072 /* HomeVC.swift in Sources */,
 				1884FD4F29A0BC1B00FBDA71 /* DetailDescTCell.swift in Sources */,
 				18BEEC12299FB42B00B7F36E /* HomeVM.swift in Sources */,

@@ -14,6 +14,7 @@ class DetailTitleCell: UITableViewCell {
        @IBOutlet weak var lblAddress: UILabel!
         @IBOutlet weak var ratingInView: UIView!
     
+    @IBOutlet weak var btnNavigation: UIButton!
     @IBOutlet weak var btnRating: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
