@@ -11,6 +11,7 @@ import FloatRatingView
 class RatingListTCell: UITableViewCell {
     @IBOutlet weak var lblAccountLink: UILabel!
     @IBOutlet weak var lblTime: UILabel!
+    @IBOutlet weak var btnAccLink: UIButton!
     
     @IBOutlet weak var txtDesc: UITextView!
     @IBOutlet weak var lblReview: UILabel!

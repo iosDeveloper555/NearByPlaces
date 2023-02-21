@@ -1049,7 +1049,7 @@ Punjab</string>
                                                     <action selector="backBtnTapped:" destination="VZz-pT-j6v" eventType="touchUpInside" id="Gsa-BK-eKN"/>
                                                 </connections>
                                             </button>
-                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoB-DE-Ea2">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoB-DE-Ea2">
                                                 <rect key="frame" x="80" y="58.000000000000007" width="233" height="24.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="20"/>
                                                 <color key="textColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -1097,6 +1097,7 @@ Punjab</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblTitle" destination="MoB-DE-Ea2" id="bpB-u9-q1n"/>
                         <outlet property="tableDetails" destination="con-Xv-qCp" id="yUz-t1-A9m"/>
                     </connections>
                 </viewController>

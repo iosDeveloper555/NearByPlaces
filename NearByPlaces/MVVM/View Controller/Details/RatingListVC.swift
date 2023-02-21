@@ -11,10 +11,13 @@ class RatingListVC: BaseVC {
     
 
     @IBOutlet weak var tableDetails: UITableView!
+    @IBOutlet weak var lblTitle: UILabel!
+
     var locationDetail:HomeModel?
     
     var placeId = "ChIJ1Z6WLW77mUcRLDKrwySdu14"
     var ratingArray:[RatingModel] = []
+    var placeName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +30,7 @@ class RatingListVC: BaseVC {
                 
                 self.openSimpleAlert(message: APIManager.INTERNET_ERROR)
             }
-        
+        self.lblTitle.text = locationDetail?.name
 
     }
     
@@ -72,12 +75,18 @@ extension RatingListVC:UITableViewDelegate,UITableViewDataSource
         
         cell.lblName.text = model.author_name
         cell.lblTime.text = model.relative_time_description
-        cell.lblReview.text = "\(model.rating ?? 0)"
         cell.lblAccountLink.text=model.author_url
         cell.txtDesc.text = model.text
-        cell.imgProfile.setImageFromRemoteUrl(type: .Google,url: model.profile_photo_url ?? kEmptyString)
 
+        let rating = Double(model.rating ?? 0)
+        cell.lblReview.text = "\(rating)"
+        cell.viewrating.rating = rating
+        
+        cell.imgProfile.setImageFromRemoteUrl(type: .Google,url: model.profile_photo_url ?? kEmptyString)
         cell.selectedBackgroundView = bgColorView
+        cell.btnAccLink.tag = indexPath.row
+        cell.btnAccLink.addTarget(self, action: #selector(openLink), for: UIControl.Event.touchUpInside)
+        
         return cell
     }
     
@@ -89,6 +98,14 @@ extension RatingListVC:UITableViewDelegate,UITableViewDataSource
         
     }
  
+    @objc func openLink(_ sender:UIButton)
+    {
+        let model = self.ratingArray[sender.tag]
+
+        if let url = URL(string: model.author_url ?? "https://www.google.com/") {
+            UIApplication.shared.open(url)
+        }
+    }
     
     
 }
@@ -100,7 +117,7 @@ extension RatingListVC
    
     func getPlaceIdAPI()
     {
-           
+        Indicator.shared.showIndicator()
         let name = locationDetail?.name ?? "name"
         let urlString = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=\(name)&key=AIzaSyDFPQu9rxw0T1FEkxpeTZMjOawBaqVcJzc"
         if let encoded = urlString.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),let url = URL(string: encoded)
@@ -120,9 +137,15 @@ extension RatingListVC
                              }
                              print("Place id =\(self.placeId)")
                          }
+                         Indicator.shared.hideIndicator()
+
                      case .failure(let error):
                          print(error)
-                     }             }
+                         Indicator.shared.hideIndicator()
+
+                     }
+                 
+             }
         }
     }
     
