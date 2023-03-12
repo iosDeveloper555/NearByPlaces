@@ -75,4 +75,15 @@ extension AppDelegate
         self.window?.makeKeyAndVisible()
         
     }
+    
+    func navigateToLogin()
+    {
+        let vc = SignUpVC.instantiate(fromAppStoryboard: .Main)
+        let nav = UINavigationController(rootViewController: vc)
+        nav.navigationBar.isHidden = true
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = nav
+        self.window?.makeKeyAndVisible()
+        
+    }
 }

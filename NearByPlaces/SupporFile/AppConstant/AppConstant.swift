@@ -133,9 +133,11 @@ let kProfile = "Profile"
 let kLocation = "Please enable location."
 
 let kEmptyImageAlert = "Please upload profile image."
-let kEmptyFirstNameAlert = "Please enter first name."
-let kEmptyLastNameAlert = "Please enter last name."
+let kEmptyFirstNameAlert = "Please enter name."
 let kMinNameAlert = "Name must be at least 2 characters long."
+
+let kEmptyPasswordAlert = "Please enter password."
+let kMinPasswordAlert = "Password must be at least 6 characters long."
 
 let kEmptyEmailAlert = "Please enter email."
 let kValidEmailAlert = "Please enter valid email."

@@ -53,5 +53,9 @@
                 </dict>
            </dict>
       </dict>
+        <key>NSCameraUsageDescription</key>
+        <string>To Take Photos</string>
+        <key>NSPhotoLibraryUsageDescription</key>
+        <string>Photo Usage</string>
 </dict>
 </plist>

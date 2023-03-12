@@ -7,13 +7,37 @@
 
 import UIKit
 import CoreLocation
+import Photos
+import MobileCoreServices
+import CoreTelephony
+
+@objc protocol PickerDelegate {
+    @objc optional func didSelectItem(at index: Int, item: String)
+    @objc optional func didSelectDate(date: Date)
+    @objc optional func didPickDocument(url: URL)
+}
+
 
 class BaseVC: UIViewController {
 
+    //MARK:- Variables
+    var appDelegate = UIApplication.shared.delegate as? AppDelegate
+    var pickerView = UIPickerView()
+    var datePickerView = UIDatePicker()
+    var pickerTextfield : UITextField!
+    var pickerDelegate: PickerDelegate?
+    var pickerArray = [String]()
+    
+    var startDate: Date?
+    var startShaking = CFAbsoluteTimeGetCurrent()
+
+
+    //MARK:- Class Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        datePickerView.locale = Locale(identifier: "en_US_POSIX")
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+       
     }
     func setHeader()
     {
@@ -180,3 +204,170 @@ extension UIApplication {
         }
     }
 }
+extension BaseVC {
+    
+    func showImagePicker(showVideo: Bool = false, showDocument: Bool = false) {
+        let alert  = UIAlertController(title: "SELECT MEDIA", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "GALLERY", style: .default, handler: {action in
+            let photos = PHPhotoLibrary.authorizationStatus()
+            if photos == .notDetermined || photos == .denied || photos == .restricted {
+                PHPhotoLibrary.requestAuthorization({status in
+                    DispatchQueue.main.async {
+                        if status == .authorized {
+                            CustomImagePickerView.sharedInstace.pickImageUsing(target: self, mode: .gallery, showVideo: showVideo)
+                        }
+                        else {
+                            // self.showAlert(message: "Please enable the library permission from the settings.", {
+                            self.openSettings(message: "Please enable the library permission from the settings.")
+                            // }//)
+                            return
+                        }
+                    }
+                })
+            }
+            else {
+                CustomImagePickerView.sharedInstace.pickImageUsing(target: self, mode: .gallery, showVideo: showVideo)
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "CAMERA", style: .default, handler: {action in
+            AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
+                DispatchQueue.main.async {
+                    if response {
+                        CustomImagePickerView.sharedInstace.pickImageUsing(target: self, mode: .camera, showVideo: showVideo)
+                    } else {
+                        //                       // self.showAlert(message: "Please enable the camera permission from the settings.", {
+                        //                            self.openSettings()
+                        self.openSettings(message: "Please enable the camera permission from the settings.")
+                        //                        })
+                        return
+                    }
+                }
+            }
+        }))
+        
+        alert.addAction(UIAlertAction(title: "CANCEL", style: .cancel, handler: nil))
+        
+        
+        if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad)
+        {
+            // Ipad
+            alert.popoverPresentationController?.sourceView = self.view // works for both iPhone & iPad
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        else
+        {
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+    }
+    
+    
+    func openGallery() {
+        let photos = PHPhotoLibrary.authorizationStatus()
+        if photos == .notDetermined || photos == .denied || photos == .restricted {
+            PHPhotoLibrary.requestAuthorization({status in
+                DispatchQueue.main.async {
+                    if status == .authorized {
+                        CustomImagePickerView.sharedInstace.pickImageUsing(target: self, mode: .gallery)
+                    }
+                    else {
+                   
+                        self.openSettings(message: "Please enable the library permission from the settings.")
+                        return
+                    }
+                }
+            })
+        }
+        else {
+            CustomImagePickerView.sharedInstace.pickImageUsing(target: self, mode: .gallery)
+        }
+    }
+    
+    
+}
+
+
+
+extension BaseVC: UIPickerViewDelegate,UIPickerViewDataSource {
+    
+    //MARK: Custom Picker Methods
+    func setPickerView(textField: UITextField, array: [String], selectedIndex: Int = 0) {
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        pickerArray = array
+        pickerTextfield = textField
+        
+        //Set Picker View to Textfield
+        textField.inputView = pickerView
+        textField.text = pickerArray[selectedIndex]
+        pickerView.reloadAllComponents()
+        pickerView.selectRow(selectedIndex, inComponent: 0, animated: false)
+    }
+    
+    // Delegate Methods
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerArray.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+
+        return pickerArray[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        pickerDelegate?.didSelectItem?(at: row, item: pickerArray[row])
+       
+        self.pickerTextfield.text = pickerArray[row]
+        
+    }
+    
+    //MARK: Custom Date Picker
+    func setDatePicker(textField: UITextField, datePickerMode: UIDatePicker.Mode = .dateAndTime, maximunDate: Date? = nil, minimumDate: Date? = Date()) {
+        textField.inputView = datePickerView
+        pickerTextfield = textField
+        if #available(iOS 13.4, *) {
+            datePickerView.preferredDatePickerStyle = .wheels
+        } else {
+            // Fallback on earlier versions
+        }
+        
+        datePickerView.datePickerMode = datePickerMode
+        datePickerView.timeZone = NSTimeZone.local
+        datePickerView.backgroundColor = UIColor.lightGray
+        
+        let calendar = Calendar(identifier: .gregorian)
+
+           let currentDate = Date()
+           var components = DateComponents()
+           components.calendar = calendar
+
+           components.year = -18
+           components.month = 12
+           let maxDate = calendar.date(byAdding: components, to: currentDate)!
+
+           components.year = -100
+           let minDate = calendar.date(byAdding: components, to: currentDate)!
+
+        
+        datePickerView.maximumDate = maxDate
+        datePickerView.minimumDate = minDate
+        datePickerView.locale = Locale(identifier: "en_US_POSIX")
+        datePickerView.addTarget(self, action: #selector(self.didDatePickerViewValueChanged(sender:)), for: .valueChanged)
+        
+        
+    }
+    
+    
+    @objc func didDatePickerViewValueChanged(sender: UIDatePicker) {
+       pickerDelegate?.didSelectDate?(date: sender.date)
+    }
+    
+
+}
+

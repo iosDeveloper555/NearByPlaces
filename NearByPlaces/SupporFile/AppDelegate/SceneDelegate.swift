@@ -19,6 +19,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.overrideUserInterfaceStyle = .light
         }
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        if DataManager.userId == 0 || DataManager.userId == nil
+        {
+            self.navigateToInto()
+        }
+        else
+        {
+            self.navigateToHome()
+
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -70,6 +80,19 @@ extension SceneDelegate
     
         let storyBoard = UIStoryboard.storyboard(storyboard: .Tabbar)
         let vc = storyBoard.instantiateViewController(withIdentifier: "TabbarVC") as! TabbarVC
+
+        let nav = UINavigationController(rootViewController: vc)
+        nav.navigationBar.isHidden = true
+        UIApplication.shared.windows.first?.rootViewController = nav
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
+
+        
+    }
+    
+    func navigateToLogin()
+    {
+    
+        let vc = SignUpVC.instantiate(fromAppStoryboard: .Main)
 
         let nav = UINavigationController(rootViewController: vc)
         nav.navigationBar.isHidden = true

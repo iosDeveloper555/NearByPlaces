@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1805464C29BC4C220099280D /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805464B29BC4C220099280D /* SignInVC.swift */; };
+		1805464E29BC4FA80099280D /* MyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805464D29BC4FA80099280D /* MyProfileVC.swift */; };
+		1805465129BC5C000099280D /* CustomImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805465029BC5C000099280D /* CustomImagePickerView.swift */; };
+		1805465329BC5FFC0099280D /* Auth+Webservices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805465229BC5FFC0099280D /* Auth+Webservices.swift */; };
+		1805465529BC612C0099280D /* AuthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805465429BC612C0099280D /* AuthVM.swift */; };
+		1805465729BC653B0099280D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805465629BC653B0099280D /* UserModel.swift */; };
+		1805465A29BC6ADE0099280D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805465929BC6ADE0099280D /* DataManager.swift */; };
 		180EA20E29668978002D7691 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EA20D29668978002D7691 /* BaseVC.swift */; };
 		18241C58296C48A2009A8510 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18241C57296C48A2009A8510 /* CustomTabBar.swift */; };
 		184A2B5529716A1D009B7DD0 /* ProfileHeadetTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184A2B5329716A1C009B7DD0 /* ProfileHeadetTCell.swift */; };
@@ -46,6 +53,7 @@
 		18C3EF8B29A3AED3002BD5BC /* RatingListTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3EF8929A3AED3002BD5BC /* RatingListTCell.swift */; };
 		18C3EF8C29A3AED3002BD5BC /* RatingListTCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C3EF8A29A3AED3002BD5BC /* RatingListTCell.xib */; };
 		18C3EF8E29A3C6C7002BD5BC /* RatingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3EF8D29A3C6C7002BD5BC /* RatingModel.swift */; };
+		18DE813629BC3787006ABC77 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE813529BC3787006ABC77 /* SignUpVC.swift */; };
 		18E4739E29667C0B00982EED /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E4739529667C0B00982EED /* Inter-Medium.ttf */; };
 		18E4739F29667C0B00982EED /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E4739629667C0B00982EED /* Inter-Light.ttf */; };
 		18E473A029667C0B00982EED /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E4739729667C0B00982EED /* Inter-Thin.ttf */; };
@@ -106,6 +114,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1805464B29BC4C220099280D /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		1805464D29BC4FA80099280D /* MyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileVC.swift; sourceTree = "<group>"; };
+		1805465029BC5C000099280D /* CustomImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImagePickerView.swift; sourceTree = "<group>"; };
+		1805465229BC5FFC0099280D /* Auth+Webservices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Auth+Webservices.swift"; sourceTree = "<group>"; };
+		1805465429BC612C0099280D /* AuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVM.swift; sourceTree = "<group>"; };
+		1805465629BC653B0099280D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		1805465929BC6ADE0099280D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		180EA20D29668978002D7691 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		18241C57296C48A2009A8510 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		184A2B5329716A1C009B7DD0 /* ProfileHeadetTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeadetTCell.swift; sourceTree = "<group>"; };
@@ -145,6 +160,7 @@
 		18C3EF8929A3AED3002BD5BC /* RatingListTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingListTCell.swift; sourceTree = "<group>"; };
 		18C3EF8A29A3AED3002BD5BC /* RatingListTCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingListTCell.xib; sourceTree = "<group>"; };
 		18C3EF8D29A3C6C7002BD5BC /* RatingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingModel.swift; sourceTree = "<group>"; };
+		18DE813529BC3787006ABC77 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		18E4739529667C0B00982EED /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		18E4739629667C0B00982EED /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
 		18E4739729667C0B00982EED /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
@@ -231,9 +247,26 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		1805464F29BC5C000099280D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1805465029BC5C000099280D /* CustomImagePickerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1805465829BC6AC90099280D /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				1805465929BC6ADE0099280D /* DataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		180EA20C29668957002D7691 /* BaseVC */ = {
 			isa = PBXGroup;
 			children = (
+				1805464F29BC5C000099280D /* View */,
 				180EA20D29668978002D7691 /* BaseVC.swift */,
 			);
 			path = BaseVC;
@@ -242,6 +275,7 @@
 		184C3FE12965AC5E005ADE6D /* SupporFile */ = {
 			isa = PBXGroup;
 			children = (
+				1805465829BC6AC90099280D /* DataManager */,
 				18BEEC0D299FAFC600B7F36E /* Network */,
 				18595CE32971766B00A3A6BE /* CustomUI */,
 				184C3FFA2965ACF6005ADE6D /* AppDelegate */,
@@ -396,6 +430,7 @@
 			children = (
 				18BEEC18299FBA9200B7F36E /* HomeModel.swift */,
 				18C3EF8D29A3C6C7002BD5BC /* RatingModel.swift */,
+				1805465629BC653B0099280D /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -413,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				18BEEC11299FB42B00B7F36E /* HomeVM.swift */,
+				1805465429BC612C0099280D /* AuthVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -421,8 +457,19 @@
 			isa = PBXGroup;
 			children = (
 				18BEEC16299FB56100B7F36E /* Home+Webservices.swift */,
+				1805465229BC5FFC0099280D /* Auth+Webservices.swift */,
 			);
 			path = Webservices;
+			sourceTree = "<group>";
+		};
+		18DE813429BC3772006ABC77 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				18DE813529BC3787006ABC77 /* SignUpVC.swift */,
+				1805464B29BC4C220099280D /* SignInVC.swift */,
+				1805464D29BC4FA80099280D /* MyProfileVC.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		18E4739329667BE300982EED /* Font */ = {
@@ -546,6 +593,7 @@
 		AA775581294C75BB00408072 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				18DE813429BC3772006ABC77 /* Auth */,
 				1884FD4329A0B92B00FBDA71 /* Details */,
 				186A449529703DB700D9FBE1 /* Setting */,
 				180EA20C29668957002D7691 /* BaseVC */,
@@ -758,6 +806,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				184C3FEE2965AC5E005ADE6D /* UITextField+Extension.swift in Sources */,
+				1805465729BC653B0099280D /* UserModel.swift in Sources */,
 				AA775589294C80A900408072 /* LocationVC.swift in Sources */,
 				AA77558B294C80BF00408072 /* SettingVC.swift in Sources */,
 				18BEEC1B299FC5F200B7F36E /* UIImage+Extension.swift in Sources */,
@@ -769,11 +818,15 @@
 				184C3FFF2965AD50005ADE6D /* IntrollCCell.swift in Sources */,
 				184C3FEB2965AC5E005ADE6D /* UIView+Extension.swift in Sources */,
 				AA81132F29504BD4003DFCC5 /* ListTVCell.swift in Sources */,
+				1805465529BC612C0099280D /* AuthVM.swift in Sources */,
 				18BEEC0F299FAFED00B7F36E /* NetworkInterface.swift in Sources */,
+				18DE813629BC3787006ABC77 /* SignUpVC.swift in Sources */,
 				184C3FEC2965AC5E005ADE6D /* UIViewController+Extension.swift in Sources */,
 				184C3FF12965AC93005ADE6D /* Font+Extension.swift in Sources */,
 				AA775572294C420500408072 /* ViewController.swift in Sources */,
+				1805465129BC5C000099280D /* CustomImagePickerView.swift in Sources */,
 				AA81133629506A21003DFCC5 /* GrowingTextView.swift in Sources */,
+				1805465A29BC6ADE0099280D /* DataManager.swift in Sources */,
 				184C3FEA2965AC5E005ADE6D /* Date+Extension.swift in Sources */,
 				18C3EF8E29A3C6C7002BD5BC /* RatingModel.swift in Sources */,
 				AA775585294C77FB00408072 /* ListVC.swift in Sources */,
@@ -781,7 +834,9 @@
 				184C3FEF2965AC5E005ADE6D /* AppConstant.swift in Sources */,
 				184A2B5529716A1D009B7DD0 /* ProfileHeadetTCell.swift in Sources */,
 				184C3FED2965AC5E005ADE6D /* String+Extension.swift in Sources */,
+				1805465329BC5FFC0099280D /* Auth+Webservices.swift in Sources */,
 				18C3EF8B29A3AED3002BD5BC /* RatingListTCell.swift in Sources */,
+				1805464C29BC4C220099280D /* SignInVC.swift in Sources */,
 				AA775583294C75E300408072 /* HomeVC.swift in Sources */,
 				1884FD4F29A0BC1B00FBDA71 /* DetailDescTCell.swift in Sources */,
 				18BEEC12299FB42B00B7F36E /* HomeVM.swift in Sources */,
@@ -797,6 +852,7 @@
 				18241C58296C48A2009A8510 /* CustomTabBar.swift in Sources */,
 				AA775570294C420500408072 /* SceneDelegate.swift in Sources */,
 				18BEEC17299FB56100B7F36E /* Home+Webservices.swift in Sources */,
+				1805464E29BC4FA80099280D /* MyProfileVC.swift in Sources */,
 				184C3FF72965ACA8005ADE6D /* UIStoryboard+Extension.swift in Sources */,
 				184C3FF52965ACA0005ADE6D /* TableView+Extension.swift in Sources */,
 			);

@@ -30,16 +30,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="350" height="154"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beschreibung:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ija-hc-T5S">
-                                <rect key="frame" x="20" y="0.0" width="310" height="19.666666666666668"/>
-                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                <rect key="frame" x="20" y="0.0" width="310" height="22"/>
+                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4Z-us-eWN">
-                                <rect key="frame" x="20" y="35.666666666666664" width="310" height="110.33333333333334"/>
+                                <rect key="frame" x="20" y="38" width="310" height="108"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do e" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ubB-Zm-S2N">
-                                        <rect key="frame" x="0.0" y="0.0" width="310" height="110.33333333333333"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="108"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" red="0.40784313725490196" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>

@@ -71,8 +71,9 @@ extension LocationDetailVC:UITableViewDelegate,UITableViewDataSource
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: kDetailTitleCell) as! DetailTitleCell
             cell.selectedBackgroundView = bgColorView
+            
             cell.lblName.text = locationDetail?.name
-            cell.lblAddress.text = locationDetail?.address
+            cell.lblAddress.text = locationDetail?.filter
             cell.btnRating.addTarget(self, action: #selector(OpenRating), for: .touchUpInside)
             cell.btnNavigation.addTarget(self, action: #selector(OpenNavigation), for: .touchUpInside)
 

@@ -18,12 +18,16 @@ class ApiKey {
     static let kToken = "token"
         
     static let kType = "type"
+    static let kName = "name"
+    static let kEmail = "email"
+    static let kPassword = "password"
+    
+    
     
     static let kId = "id"
     static let kCountry = "country"
     static let kState = "state"
     static let kAddress = "address"
-    static let kName = "name"
     
     static let kDescription = "description"
     static let kFilter = "filter"

@@ -29,6 +29,8 @@ class HomeVC: BaseVC {
     var permissionLocationCheck:Bool = false
     var selectedTopIndex:[Int] = []
     
+    var filterArray:[String] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -163,6 +165,7 @@ class HomeVC: BaseVC {
             hotelsImg.image = UIImage(named: "Hotels-&-Camping- Act")
             strandeImg.image = UIImage(named: "Str„nde-&-Seen- Act")
             baderImg.image = UIImage(named: "B„der-&-Saunen Act")
+           
         }
         else if self.selectedTopIndex.count == 0
         {
@@ -192,8 +195,46 @@ extension HomeVC
     {
         if Connectivity.isConnectedToInternet {
             var data = JSONDictionary()
-            data[ApiKey.kType] = type
-            self.getHomeAPI(data: data)
+            print(self.selectedTopIndex)
+            self.filterArray.removeAll()
+            for id in self.selectedTopIndex
+            {
+                if id == 0
+                {
+                    self.filterArray.append(TYPE_ALL)
+
+                }
+                else if id == 1  && !self.filterArray.contains(TYPE_HC)
+
+                {
+                    self.filterArray.append(TYPE_HC)
+
+                }
+                else if id == 2  && !self.filterArray.contains(TYPE_SS)
+                {
+                    self.filterArray.append(TYPE_SS)
+
+                }
+                else if id == 3 && !self.filterArray.contains(TYPE_BS)
+                {
+                    self.filterArray.append(TYPE_BS)
+
+                }
+            }
+            if self.filterArray.count>0
+            {
+                data[ApiKey.kType] = self.filterArray.joined(separator: ",")
+
+            }
+            else
+            {
+                data[ApiKey.kType] = TYPE_ALL
+
+            }
+            
+            print(data)
+
+           // self.getHomeAPI(data: data)
         } else {
             
             self.openSimpleAlert(message: APIManager.INTERNET_ERROR)
