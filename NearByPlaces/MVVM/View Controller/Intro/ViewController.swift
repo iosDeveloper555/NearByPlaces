@@ -39,7 +39,7 @@ class ViewController: BaseVC {
     @IBAction func skipBtnOutlet(_ sender: UIButton) {
         sender.animateButtonUp()
 
-     SCENEDEL?.navigateToLogin()//navigateToHome()
+     SCENEDEL?.navigateToLogin()//navigateToHome() //
         
     }
     
@@ -53,7 +53,7 @@ class ViewController: BaseVC {
 
         }else{
             
-            SCENEDEL?.navigateToHome()
+            SCENEDEL?.navigateToLogin()//.navigateToHome()
         }
     }
     
@@ -109,7 +109,7 @@ extension ViewController:UICollectionViewDelegate,UICollectionViewDataSource,UIC
         
         if index == 2
         {
-            SCENEDEL?.navigateToHome()
+            SCENEDEL?.navigateToLogin()//navigateToHome()
 
         }
         

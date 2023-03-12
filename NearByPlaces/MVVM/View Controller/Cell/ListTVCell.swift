@@ -27,3 +27,16 @@ class ListTVCell: UITableViewCell {
 //    }
 
 }
+
+struct FilterType
+{
+    var type:Filter
+}
+enum Filter:String
+{
+    case TYPE_ALL =  "all"
+    case TYPE_BS =  "Bader & Saunen"
+    case TYPE_SS =  "Strande & Seen"
+    case TYPE_HC =  "Hotels  & Camping"
+
+}

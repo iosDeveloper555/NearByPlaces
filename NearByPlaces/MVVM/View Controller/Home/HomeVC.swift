@@ -29,161 +29,169 @@ class HomeVC: BaseVC {
     var permissionLocationCheck:Bool = false
     var selectedTopIndex:[Int] = []
     
-    var filterArray:[String] = []
+    var filterArray:[Filter] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-
+        
+        self.showAllFiter()
         self.CallAPI()
-
+        
         self.LocationSetup()
-            
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        debugPrint(#function)
         self.selectedTopIndex.removeAll()
         UIApplication.shared.statusBarStyle = .darkContent
-
+        
         self.CheckLocationPermission()
-
+        
     }
     override func viewWillDisappear(_ animated: Bool) {
         UIApplication.shared.statusBarStyle = .lightContent
-
+        
     }
-
+    
     @IBAction func selectAllBtnTapped(_ sender: UIButton) {
         
-
-        if  self.selectedTopIndex.count >= 3
+        if  self.filterArray.count >= 3
         {
-            self.selectedTopIndex.removeAll()
+            self.filterArray.removeAll()
             
         }
         else
         {
-            if !self.selectedTopIndex.contains(1)
+            if !self.filterArray.contains(.TYPE_SS)
             {
-                self.selectedTopIndex.append(1)
+                self.filterArray.append(.TYPE_SS)
             }
-            if !self.selectedTopIndex.contains(2)
+            if !self.filterArray.contains(.TYPE_HC)
             {
-                self.selectedTopIndex.append(2)
+                self.filterArray.append(.TYPE_HC)
             }
-            if !self.selectedTopIndex.contains(3)
+            if !self.filterArray.contains(.TYPE_BS)
             {
-                self.selectedTopIndex.append(3)
+                self.filterArray.append(.TYPE_BS)
             }
-           
             
         }
+        
         self.showSelectStatus()
         self.CallAPI()
     }
     
     @IBAction func hotelsAndCampingBtnTapped(_ sender: UIButton) {
-      
-       // sender.isSelected = !sender.isSelected
         
-       // if sender.isSelected{
-            if !self.selectedTopIndex.contains(1)
-            {
-                self.selectedTopIndex.append(1)
-                hotelsImg.image = UIImage(named: "Hotels-&-Camping- Act")
+        if self.filterArray.contains(.TYPE_HC)
+        {
+            self.filterArray.removeAll { name in
+                name.rawValue == TYPE_HC
             }
-       // }
-    else{
-            if let index = self.selectedTopIndex.firstIndex(of: 1)
-            {
-                self.selectedTopIndex.remove(at: index)
-            }
-     
             hotelsImg.image = UIImage(named: "Hotels-&-Camping-Grey 1")
+            
+        }
+        else
+        {
+            self.filterArray.append(.TYPE_HC)
+            hotelsImg.image = UIImage(named: "Hotels-&-Camping- Act")
+            
         }
         showSelectStatus()
         self.CallAPI(type: TYPE_HC)
-
+        
     }
     
     @IBAction func strandeBtnTapped(_ sender: UIButton) {
-       // sender.isSelected = !sender.isSelected
         
-       // if sender.isSelected{
-            if !self.selectedTopIndex.contains(2)
-            {
-                self.selectedTopIndex.append(2)
-                strandeImg.image = UIImage(named: "Str„nde-&-Seen- Act")
+        if self.filterArray.contains(.TYPE_SS)
+        {
+            self.filterArray.removeAll { name in
+                name.rawValue == TYPE_SS
             }
-       // }
-    else{
-            if let index = self.selectedTopIndex.firstIndex(of: 2)
-            {
-                self.selectedTopIndex.remove(at: index)
-            }
-       
             strandeImg.image = UIImage(named: "Strände-&-Seen-Grey 1")
+            
+        }
+        else
+        {
+            self.filterArray.append(.TYPE_SS)
+            strandeImg.image = UIImage(named: "Str„nde-&-Seen- Act")
+            
         }
         showSelectStatus()
         self.CallAPI(type: TYPE_SS)
-
+        
     }
     
     @IBAction func baderBtnTapped(_ sender: UIButton) {
-       // sender.isSelected = !sender.isSelected
-        
-        //if sender.isSelected{
-            
-            if !self.selectedTopIndex.contains(3)
-            {
-                self.selectedTopIndex.append(3)
-                baderImg.image = UIImage(named: "B„der-&-Saunen Act")
-
+        if self.filterArray.contains(.TYPE_BS)
+        {
+            self.filterArray.removeAll { name in
+                name.rawValue == TYPE_BS
             }
-        //}
-    else{
-            if let index = self.selectedTopIndex.firstIndex(of: 3)
-            {
-                self.selectedTopIndex.remove(at: index)
-            }
-    
             baderImg.image = UIImage(named: "Bäder-&-Saunen--greypng 1")
+            
+        }
+        else
+        {
+            self.filterArray.append(.TYPE_BS)
+            baderImg.image = UIImage(named: "B„der-&-Saunen Act")
+            
         }
         showSelectStatus()
         self.CallAPI(type: TYPE_BS)
-
+        
     }
     
     func showSelectStatus()
     
     {
-        print(self.selectedTopIndex)
-        if self.selectedTopIndex.count >= 3
+        if self.filterArray.count >= 3
         {
             allImg.image = UIImage(named: "ALL-IN- 1")
             hotelsImg.image = UIImage(named: "Hotels-&-Camping- Act")
             strandeImg.image = UIImage(named: "Str„nde-&-Seen- Act")
             baderImg.image = UIImage(named: "B„der-&-Saunen Act")
-           
+            
         }
-        else if self.selectedTopIndex.count == 0
+        else if self.filterArray.count == 0
         {
             allImg.image = UIImage(named: "ALL-IN-non Act")
             hotelsImg.image = UIImage(named: "Hotels-&-Camping-Grey 1")
-
+            
             strandeImg.image = UIImage(named: "Strände-&-Seen-Grey 1")
-
+            
             baderImg.image = UIImage(named: "Bäder-&-Saunen--greypng 1")
-
+            
         }
         else
         {
             allImg.image = UIImage(named: "ALL-IN-non Act")
-
+            
         }
     }
- 
+    
+    func showAllFiter()
+    {
+        if !self.filterArray.contains(.TYPE_SS)
+        {
+            self.filterArray.append(.TYPE_SS)
+        }
+        if !self.filterArray.contains(.TYPE_HC)
+        {
+            self.filterArray.append(.TYPE_HC)
+        }
+        if !self.filterArray.contains(.TYPE_BS)
+        {
+            self.filterArray.append(.TYPE_BS)
+        }
+        self.showSelectStatus()
+        
+    }
+    
     
 }
 
@@ -195,46 +203,22 @@ extension HomeVC
     {
         if Connectivity.isConnectedToInternet {
             var data = JSONDictionary()
-            print(self.selectedTopIndex)
-            self.filterArray.removeAll()
-            for id in self.selectedTopIndex
-            {
-                if id == 0
-                {
-                    self.filterArray.append(TYPE_ALL)
-
-                }
-                else if id == 1  && !self.filterArray.contains(TYPE_HC)
-
-                {
-                    self.filterArray.append(TYPE_HC)
-
-                }
-                else if id == 2  && !self.filterArray.contains(TYPE_SS)
-                {
-                    self.filterArray.append(TYPE_SS)
-
-                }
-                else if id == 3 && !self.filterArray.contains(TYPE_BS)
-                {
-                    self.filterArray.append(TYPE_BS)
-
-                }
-            }
             if self.filterArray.count>0
             {
-                data[ApiKey.kType] = self.filterArray.joined(separator: ",")
-
+                data[ApiKey.kType] = self.filterArray.map({ fil in
+                    fil.rawValue
+                }).joined(separator: ",")
+                
             }
             else
             {
-                data[ApiKey.kType] = TYPE_ALL
-
+                data[ApiKey.kType] = type
+                
             }
             
             print(data)
-
-           // self.getHomeAPI(data: data)
+            
+            self.getHomeAPI(data: data)
         } else {
             
             self.openSimpleAlert(message: APIManager.INTERNET_ERROR)
@@ -261,7 +245,7 @@ extension HomeVC
     func showAllMarker()
     {
         mapView.clear()
-
+        
         for i  in 0..<HomeVM.shared.homeUserList.count
         {
             let dict = HomeVM.shared.homeUserList[i]
@@ -276,7 +260,7 @@ extension HomeVC
             marker.snippet = dict.address
             marker.userData = [ApiKey.kId:i]
             //marker.setValue("\(i)", forKey: ApiKey.kId)
-
+            
             marker.map = self.mapView
             self.mapView.animate(to: camera)
         }
@@ -286,14 +270,19 @@ extension HomeVC
 
 extension HomeVC:GMSMapViewDelegate
 {
-//    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-//        debugPrint(#function)
-//
-//        return true
-//    }
+    //    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+    //        debugPrint(#function)
+    //
+    //        return true
+    //    }
+    
+    
+    
+    
+    
     func mapView(_ mapView: GMSMapView, didTap overlay: GMSOverlay) {
         debugPrint(#function)
-
+        
     }
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
@@ -303,16 +292,16 @@ extension HomeVC:GMSMapViewDelegate
         
         if let dict = marker.userData as? JSONDictionary, let index = dict[ApiKey.kId] as? Int
         {
-           if  HomeVM.shared.homeUserList.count>index
+            if  HomeVM.shared.homeUserList.count>index
             {
-              let vc = LocationDetailVC.instantiate(fromAppStoryboard: .Tabbar)
-               vc.locationDetail=HomeVM.shared.homeUserList[index]
-               self.navigationController?.pushViewController(vc, animated: true)
+                let vc = LocationDetailVC.instantiate(fromAppStoryboard: .Tabbar)
+                vc.locationDetail=HomeVM.shared.homeUserList[index]
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
-
+        
         //debugPrint(marker.value(forKey: ApiKey.kId))
-
+        
     }
 }
 
@@ -329,43 +318,42 @@ extension HomeVC: CLLocationManagerDelegate
         self.manager.startUpdatingLocation()
         
         self.mapView.isMyLocationEnabled = true
-
+        
         let camera = GMSCameraPosition.camera(withLatitude: (CURRENTLAT), longitude: (CURRENTLONG), zoom: 17.0)
-
         self.mapView.animate(to: camera)
-       // self.mapView.settings.myLocationButton = true
+        // self.mapView.settings.myLocationButton = true
         self.mapView.settings.compassButton = true
-
-
+        
+        
     }
     
     func CheckLocationPermission()
     {
-//        DispatchQueue.main.async {
-//            if CLLocationManager.locationServicesEnabled()
-//            {
-//                switch CLLocationManager.authorizationStatus() {
-//                case .notDetermined, .restricted, .denied:
-//                    print("No access")
-//                    self.permissionLocationCheck=false
-//                //self.openSettings(message: kLocation)
-//                case .authorizedAlways, .authorizedWhenInUse:
-//                    print("Access")
-//                    self.permissionLocationCheck=true
-//                @unknown default:
-//                    break
-//                }
-//            } else {
-//                print("Location services are not enabled")
-//                self.permissionLocationCheck=false
-//                //self.openSettings(message: kLocation)
-//            }
-//            if self.permissionLocationCheck==false
-//            {
-//                self.openSettings(message: kLocation)
-//            }
-       /// }
-      
+        //        DispatchQueue.main.async {
+        //            if CLLocationManager.locationServicesEnabled()
+        //            {
+        //                switch CLLocationManager.authorizationStatus() {
+        //                case .notDetermined, .restricted, .denied:
+        //                    print("No access")
+        //                    self.permissionLocationCheck=false
+        //                //self.openSettings(message: kLocation)
+        //                case .authorizedAlways, .authorizedWhenInUse:
+        //                    print("Access")
+        //                    self.permissionLocationCheck=true
+        //                @unknown default:
+        //                    break
+        //                }
+        //            } else {
+        //                print("Location services are not enabled")
+        //                self.permissionLocationCheck=false
+        //                //self.openSettings(message: kLocation)
+        //            }
+        //            if self.permissionLocationCheck==false
+        //            {
+        //                self.openSettings(message: kLocation)
+        //            }
+        /// }
+        
     }
     
     
@@ -377,10 +365,10 @@ extension HomeVC: CLLocationManagerDelegate
             CURRENTLONG=location.coordinate.longitude
             
             let camera = GMSCameraPosition.camera(withLatitude: CURRENTLAT, longitude: CURRENTLONG, zoom: 12.0)
-
+            
             let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: CURRENTLAT, longitude: CURRENTLONG))
             marker.title = "Current Location"//location.description
-               // marker.snippet = "Sec 132 Noida India"
+            // marker.snippet = "Sec 132 Noida India"
             marker.map = self.mapView
             self.mapView.animate(to: camera)
             

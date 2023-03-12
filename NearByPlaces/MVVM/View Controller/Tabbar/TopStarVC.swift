@@ -89,6 +89,7 @@ extension TopStarVC
                 
                 let count = HomeVM.shared.homeUserList
                 debugPrint("Total user count =  \(count.count)")
+                self.topListDataArray.removeAll()
                 for dict in count
                 {
                     let top = dict.top_ten ?? kEmptyString

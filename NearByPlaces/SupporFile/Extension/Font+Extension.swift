@@ -9,13 +9,21 @@ import Foundation
 import UIKit
 
 extension UIFont {
-//    static let regular = "Averta-Regular"
-//    static let bold = "Averta-Bold"
-//    static let italic = "Averta-RegularItalic"
     enum CustomFont: String {
+        
         case bold = "Averta-Bold"
         case regular = "Averta-Regular"
+     
+        case Inter_Regular = "Inter-Regular"
+        case Inter_Thin = "Inter-Thin"
+        case Inter_Bold = "Inter-Bold"
+        case Inter_SemiBold = "Inter-SemiBold"
         
+        case Roboto_Regular = "Roboto-Regular"
+        case Roboto_Medium = "Roboto-Medium"
+        case Roboto_Bold = "Roboto-Bold"
+
+
         func fontWithSize(size: CGFloat) -> UIFont {
             return UIFont(name: rawValue, size: size)!
         }

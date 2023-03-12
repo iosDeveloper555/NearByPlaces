@@ -83,7 +83,12 @@ extension LocationDetailVC:UITableViewDelegate,UITableViewDataSource
             
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: kDetailDescTCell) as! DetailDescTCell
-            cell.textDesc.text = locationDetail?.description
+            
+            let attributedText = NSMutableAttributedString(string: "Beschreibung: ", attributes: [NSAttributedString.Key.font: UIFont(name: UIFont.CustomFont.Inter_Bold.rawValue, size: 18)! ])
+
+            attributedText.append(NSAttributedString(string: (locationDetail?.description ?? kEmptyString).capitalized, attributes: [NSAttributedString.Key.font:  UIFont(name: UIFont.CustomFont.Inter_Regular.rawValue, size: 14)!, NSAttributedString.Key.foregroundColor: UIColor.init(hexString: "685F5F")]))
+            
+            cell.textDesc.attributedText = attributedText
             
             cell.selectedBackgroundView = bgColorView
 

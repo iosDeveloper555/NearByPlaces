@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = true
 
-
+        printFontName()
         
         
         // Override point for customization after application launch.
@@ -85,5 +85,17 @@ extension AppDelegate
         self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()
         
+    }
+    
+    func printFontName()
+    {
+        for family in UIFont.familyNames {
+          let sName: String = family as String
+          debugPrint("family: \(sName)")
+
+            for name in UIFont.fontNames(forFamilyName: sName) {
+                debugPrint("name: \(name as String)")
+          }
+        }
     }
 }

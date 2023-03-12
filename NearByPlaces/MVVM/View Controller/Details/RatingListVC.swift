@@ -30,7 +30,7 @@ class RatingListVC: BaseVC {
                 
                 self.openSimpleAlert(message: APIManager.INTERNET_ERROR)
             }
-        self.lblTitle.text = locationDetail?.name
+        self.lblTitle.text = "Google Reviews"//locationDetail?.name
 
     }
     
@@ -75,7 +75,7 @@ extension RatingListVC:UITableViewDelegate,UITableViewDataSource
         
         cell.lblName.text = model.author_name
         cell.lblTime.text = model.relative_time_description
-        cell.lblAccountLink.text=model.author_url
+        cell.lblAccountLink.text=""//model.author_url
         cell.txtDesc.text = model.text
 
         let rating = Double(model.rating ?? 0)
@@ -85,7 +85,7 @@ extension RatingListVC:UITableViewDelegate,UITableViewDataSource
         cell.imgProfile.setImageFromRemoteUrl(type: .Google,url: model.profile_photo_url ?? kEmptyString)
         cell.selectedBackgroundView = bgColorView
         cell.btnAccLink.tag = indexPath.row
-        cell.btnAccLink.addTarget(self, action: #selector(openLink), for: UIControl.Event.touchUpInside)
+      //  cell.btnAccLink.addTarget(self, action: #selector(openLink), for: UIControl.Event.touchUpInside)
         
         return cell
     }
