@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,16 +21,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ScE-A1-0pQ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lauch screen" translatesAutoresizingMaskIntoConstraints="NO" id="06f-qL-sCx">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lanch" translatesAutoresizingMaskIntoConstraints="NO" id="06f-qL-sCx">
+                                        <rect key="frame" x="8" y="249" width="398" height="398"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="06f-qL-sCx" secondAttribute="height" multiplier="1:1" id="2FK-lZ-IfF"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="AppThemeColor"/>
                                 <constraints>
-                                    <constraint firstItem="06f-qL-sCx" firstAttribute="top" secondItem="ScE-A1-0pQ" secondAttribute="top" id="Zg5-56-pex"/>
-                                    <constraint firstAttribute="bottom" secondItem="06f-qL-sCx" secondAttribute="bottom" id="cwC-0b-OEK"/>
-                                    <constraint firstItem="06f-qL-sCx" firstAttribute="leading" secondItem="ScE-A1-0pQ" secondAttribute="leading" id="h0N-xA-bH8"/>
-                                    <constraint firstAttribute="trailing" secondItem="06f-qL-sCx" secondAttribute="trailing" id="xcK-Hz-5UM"/>
+                                    <constraint firstAttribute="trailing" secondItem="06f-qL-sCx" secondAttribute="trailing" constant="8" id="16j-PX-Ma1"/>
+                                    <constraint firstItem="06f-qL-sCx" firstAttribute="centerX" secondItem="ScE-A1-0pQ" secondAttribute="centerX" id="CRC-sE-Pt1"/>
+                                    <constraint firstItem="06f-qL-sCx" firstAttribute="centerY" secondItem="ScE-A1-0pQ" secondAttribute="centerY" id="Ons-oo-XBv"/>
+                                    <constraint firstItem="06f-qL-sCx" firstAttribute="leading" secondItem="ScE-A1-0pQ" secondAttribute="leading" constant="8" id="uof-1a-wxb"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -48,7 +54,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="lauch screen" width="720" height="1600"/>
+        <image name="lanch" width="214.5" height="289"/>
+        <namedColor name="AppThemeColor">
+            <color red="0.0" green="0.49799999594688416" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
