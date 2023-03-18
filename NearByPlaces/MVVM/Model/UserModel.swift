@@ -7,7 +7,23 @@
 
 import Foundation
 
+struct ResponseModel
+{
+    var message:String?
+    var status:Any?
+    var response:UserModel?
+    
+    init(data:JSONDictionary)
+    {
+        self.message =  data[ApiKey.kMessage] as? String
+        self.status =  data[ApiKey.kStatus] as? Any
 
+        let user =  data[ApiKey.kResponse] as? JSONDictionary ?? [:]
+        self.response = UserModel(data: user)
+        
+    }
+    
+}
 struct UserModel
 {
     var name:String?

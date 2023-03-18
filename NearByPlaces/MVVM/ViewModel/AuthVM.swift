@@ -11,7 +11,7 @@ class AuthVM
 {
     
     static var shared = AuthVM()
-    var userData:UserModel?
+    var userData:ResponseModel?
     
     private init(){}
     func callApiForSignUp(data: JSONDictionary,response: @escaping responseCallBack)
@@ -74,13 +74,13 @@ extension AuthVM
 {
   
     func parseSignInData(response: JSONDictionary){
-        if let data = response[ApiKey.kResponse] as? JSONDictionary
-        {
+        //if let data = response[ApiKey.kResponse] as? JSONDictionary
+       // {
         
-            self.userData = UserModel(data: data)
+            self.userData = ResponseModel(data: response)
             
-            DataManager.userId = self.userData?.id ?? 0
-        }
+        DataManager.userId = self.userData?.response?.id ?? 0
+        //}
     }
           
 

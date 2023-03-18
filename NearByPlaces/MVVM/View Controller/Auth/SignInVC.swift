@@ -89,8 +89,16 @@ extension SignInVC
             }
             else{
                 
-                debugPrint("signup success! id is \(AuthVM.shared.userData?.id)")
-                SCENEDEL?.navigateToHome()
+                debugPrint("signup success! id is \(AuthVM.shared.userData)")
+                if let code  = AuthVM.shared.userData?.status as? Int, code == 200
+                {
+                    SCENEDEL?.navigateToHome()
+
+                }
+                else
+                {
+                    self.openSimpleAlert(message: AuthVM.shared.userData?.message ?? kEmptyString)
+                }
             }
         })
     }

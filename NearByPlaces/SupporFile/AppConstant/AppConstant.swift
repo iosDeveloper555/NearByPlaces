@@ -37,7 +37,7 @@ var TYPE_BS =  "Bader & Saunen"
 var TYPE_SS =  "Strande & Seen"
 var TYPE_HC =  "Hotels  & Camping"
 
-
+var kSuccess = "success"
 
 
 var CURRENTUNIT =  "Centimeters"
