@@ -51,12 +51,12 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShareNew" translatesAutoresizingMaskIntoConstraints="NO" id="rii-s9-58h">
-                                                        <rect key="frame" x="14" y="4" width="32" height="32"/>
+                                                        <rect key="frame" x="10" y="0.0" width="40" height="40"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="rii-s9-58h" secondAttribute="height" multiplier="1:1" id="IiH-Xa-8rj"/>
-                                                            <constraint firstAttribute="height" constant="32" id="ed8-pb-u2e"/>
+                                                            <constraint firstAttribute="height" constant="40" id="ed8-pb-u2e"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDx-f2-s0u">
@@ -90,10 +90,10 @@
                                                 <rect key="frame" x="80" y="0.0" width="60" height="40"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rating" translatesAutoresizingMaskIntoConstraints="NO" id="TcG-vL-Lni">
-                                                        <rect key="frame" x="14" y="4" width="32" height="32"/>
+                                                        <rect key="frame" x="10" y="0.0" width="40" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="TcG-vL-Lni" secondAttribute="height" multiplier="1:1" id="BYs-4j-7gS"/>
-                                                            <constraint firstAttribute="height" constant="32" id="fWt-Hr-Y4y"/>
+                                                            <constraint firstAttribute="height" constant="40" id="fWt-Hr-Y4y"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cO-hC-9lI">

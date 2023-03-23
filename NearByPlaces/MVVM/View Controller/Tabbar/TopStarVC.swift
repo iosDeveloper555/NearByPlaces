@@ -71,6 +71,9 @@ extension TopStarVC
         if Connectivity.isConnectedToInternet {
             var data = JSONDictionary()
             data[ApiKey.kType] = type
+            data[ApiKey.kC_Latitude] = CURRENTLAT
+            data[ApiKey.kC_Longitude] = CURRENTLONG
+
             self.getHomeAPI(data: data)
         } else {
             

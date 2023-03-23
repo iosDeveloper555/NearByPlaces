@@ -39,7 +39,7 @@ class ViewController: BaseVC {
     @IBAction func skipBtnOutlet(_ sender: UIButton) {
         sender.animateButtonUp()
 
-     SCENEDEL?.navigateToLogin()//navigateToHome() //
+     SCENEDEL?.navigateToHome() //
         
     }
     

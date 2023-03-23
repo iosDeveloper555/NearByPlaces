@@ -215,7 +215,9 @@ extension HomeVC
                 data[ApiKey.kType] = type
                 
             }
-            
+            data[ApiKey.kC_Latitude] = CURRENTLAT
+            data[ApiKey.kC_Longitude] = CURRENTLONG
+
             print(data)
             
             self.getHomeAPI(data: data)

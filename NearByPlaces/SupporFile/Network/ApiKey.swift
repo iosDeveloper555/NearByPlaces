@@ -33,7 +33,13 @@ class ApiKey {
     static let kFilter = "filter"
     static let kLatitude = "latitude"
     static let kLongitude = "longitude"
+    
+    static let kC_Latitude = "current_lat"
+    static let kC_Longitude = "current_long"
+    
     static let kLocation = "location"
     static let kLocation_image = "location image"
     static let kTop_ten = "top_ten"
+    static let kDistance = "distance"
+
 }

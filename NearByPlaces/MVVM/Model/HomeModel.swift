@@ -21,6 +21,7 @@ struct HomeModel
     var longitude:String?
     var location_image:String?
     var top_ten:String?
+    var distance:String?
     
     init(dict:JSONDictionary) {
         self.id = dict[ApiKey.kId] as? Int
@@ -35,6 +36,8 @@ struct HomeModel
         self.longitude = dict[ApiKey.kLatitude] as? String
         self.location_image = dict[ApiKey.kLocation_image] as? String
         self.top_ten = dict[ApiKey.kTop_ten] as? String
+        self.distance = (dict[ApiKey.kDistance] as? String ?? kEmptyString).appending(" Km")
+
     }
 
 }

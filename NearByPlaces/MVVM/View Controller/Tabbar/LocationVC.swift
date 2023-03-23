@@ -7,7 +7,7 @@
 
 import UIKit
 import DropDown
-
+import CoreLocation
 import Alamofire
 
 
@@ -75,7 +75,7 @@ class LocationVC: UIViewController {
         
         addressTxtView.delegate=self
         descriptionTxtView.delegate=self
-        
+        self.getCurrentLocation()
     }
     @IBAction func cityBtnOutlet(_ sender: UIButton) {
         print(#function)
@@ -98,4 +98,22 @@ extension LocationVC:UITextViewDelegate
         return newString.rangeOfCharacter(from: NSCharacterSet.whitespacesAndNewlines).location != 0
     }
 
+}
+
+extension LocationVC
+{
+    func getCurrentLocation()
+    {
+        let geocoder = CLGeocoder()
+       let loc = CLLocation(latitude: CURRENTLAT, longitude: CURRENTLONG)
+        geocoder.reverseGeocodeLocation(loc) { (placemarksArray, error) in
+
+            if (placemarksArray?.count)! > 0 {
+               let add = (((placemarksArray?.first?.addressDictionary as! NSDictionary)["FormattedAddressLines"] as? NSArray)?.componentsJoined(by: ","))
+                
+                self.addressTxtView.text = add
+            }
+        }
+
+    }
 }

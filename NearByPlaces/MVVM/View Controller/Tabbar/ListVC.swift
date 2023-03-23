@@ -32,6 +32,10 @@ class ListVC: BaseVC {
         listTV.dataSource = self
         listTV.backgroundColor = UIColor.white
         listTV.register(UINib.init(nibName: "ListTVCell", bundle: nil), forCellReuseIdentifier: "ListTVCell")
+        
+        self.listTV.estimatedRowHeight = 100
+        self.listTV.rowHeight = UITableView.automaticDimension
+
         self.showAllFiter()
         self.CallAPI()
         
@@ -192,7 +196,7 @@ extension ListVC:UITableViewDelegate, UITableViewDataSource
         
         cell.addressLbl.text=cellData.name
         cell.addressLocationLbl.text=cellData.address
-        cell.kmLbl.text = self.getDistanceInKM(lat: cellData.latitude, lang: cellData.longitude)
+        cell.kmLbl.text = cellData.distance//self.getDistanceInKM(lat: cellData.latitude, lang: cellData.longitude)
         
         
         return cell
@@ -207,6 +211,10 @@ extension ListVC:UITableViewDelegate, UITableViewDataSource
         //.modalPresentationStyle = .overFullScreen
         //self.present(vc, animated: true)
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
 }
 // MARK: - getHomeAPI Api Calls
 
@@ -229,6 +237,9 @@ extension ListVC
                 data[ApiKey.kType] = type
                 
             }
+            data[ApiKey.kC_Latitude] = CURRENTLAT
+            data[ApiKey.kC_Longitude] = CURRENTLONG
+
             self.getHomeAPI(data: data)
             
             debugPrint(data)
