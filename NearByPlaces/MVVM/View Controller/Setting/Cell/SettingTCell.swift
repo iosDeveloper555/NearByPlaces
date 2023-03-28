@@ -46,5 +46,7 @@ enum settingType:String
 
     case Community = "Community"
    case Logout = "Logout"
+    case Login = "Login"
+
    case Rechtliches = "Rechtliches"
 }

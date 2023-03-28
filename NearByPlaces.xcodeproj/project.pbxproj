@@ -14,6 +14,8 @@
 		1805465529BC612C0099280D /* AuthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805465429BC612C0099280D /* AuthVM.swift */; };
 		1805465729BC653B0099280D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805465629BC653B0099280D /* UserModel.swift */; };
 		1805465A29BC6ADE0099280D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805465929BC6ADE0099280D /* DataManager.swift */; };
+		1805CF9429D2E8D40037286A /* EmptyScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805CF9329D2E8D40037286A /* EmptyScreenView.swift */; };
+		1805CF9629D2E8DD0037286A /* EmptyScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1805CF9529D2E8DD0037286A /* EmptyScreenView.xib */; };
 		180EA20E29668978002D7691 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EA20D29668978002D7691 /* BaseVC.swift */; };
 		18241C58296C48A2009A8510 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18241C57296C48A2009A8510 /* CustomTabBar.swift */; };
 		184A2B5529716A1D009B7DD0 /* ProfileHeadetTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184A2B5329716A1C009B7DD0 /* ProfileHeadetTCell.swift */; };
@@ -121,6 +123,8 @@
 		1805465429BC612C0099280D /* AuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVM.swift; sourceTree = "<group>"; };
 		1805465629BC653B0099280D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		1805465929BC6ADE0099280D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		1805CF9329D2E8D40037286A /* EmptyScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyScreenView.swift; sourceTree = "<group>"; };
+		1805CF9529D2E8DD0037286A /* EmptyScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyScreenView.xib; sourceTree = "<group>"; };
 		180EA20D29668978002D7691 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		18241C57296C48A2009A8510 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		184A2B5329716A1C009B7DD0 /* ProfileHeadetTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeadetTCell.swift; sourceTree = "<group>"; };
@@ -250,6 +254,8 @@
 		1805464F29BC5C000099280D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1805CF9529D2E8DD0037286A /* EmptyScreenView.xib */,
+				1805CF9329D2E8D40037286A /* EmptyScreenView.swift */,
 				1805465029BC5C000099280D /* CustomImagePickerView.swift */,
 			);
 			path = View;
@@ -723,6 +729,7 @@
 				18F6B7D82966901600403722 /* Montserrat-Thin.ttf in Resources */,
 				18F6B7F22966937600403722 /* Roboto-Light.ttf in Resources */,
 				18F6B7F72966937600403722 /* Roboto-LightItalic.ttf in Resources */,
+				1805CF9629D2E8DD0037286A /* EmptyScreenView.xib in Resources */,
 				18F6B7D22966901600403722 /* Montserrat-LightItalic.ttf in Resources */,
 				186A449A29703DE500D9FBE1 /* SettingTCell.xib in Resources */,
 				18F6B7DE2966901600403722 /* Montserrat-ExtraBold.ttf in Resources */,
@@ -814,6 +821,7 @@
 				1884FD4B29A0B9FA00FBDA71 /* DetailTitleCell.swift in Sources */,
 				186A449D29704A6B00D9FBE1 /* LegalTCell.swift in Sources */,
 				18C3EF8829A3AE01002BD5BC /* RatingListVC.swift in Sources */,
+				1805CF9429D2E8D40037286A /* EmptyScreenView.swift in Sources */,
 				18BEEC14299FB46F00B7F36E /* ApiKey.swift in Sources */,
 				184C3FFF2965AD50005ADE6D /* IntrollCCell.swift in Sources */,
 				184C3FEB2965AC5E005ADE6D /* UIView+Extension.swift in Sources */,

@@ -33,7 +33,7 @@ struct HomeModel
         self.description = dict[ApiKey.kDescription] as? String
         self.filter = dict[ApiKey.kFilter] as? String
         self.latitude = dict[ApiKey.kLatitude] as? String
-        self.longitude = dict[ApiKey.kLatitude] as? String
+        self.longitude = dict[ApiKey.kLongitude] as? String
         self.location_image = dict[ApiKey.kLocation_image] as? String
         self.top_ten = dict[ApiKey.kTop_ten] as? String
         self.distance = (dict[ApiKey.kDistance] as? String ?? kEmptyString).appending(" Km")

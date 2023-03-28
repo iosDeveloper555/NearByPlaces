@@ -11,7 +11,7 @@ import CoreLocation
 import Alamofire
 
 
-class LocationVC: UIViewController {
+class LocationVC: BaseVC {
 
     @IBOutlet weak var addPlaceInView: UIView!
     @IBOutlet weak var cityTxt: UITextField!
@@ -75,7 +75,9 @@ class LocationVC: UIViewController {
         
         addressTxtView.delegate=self
         descriptionTxtView.delegate=self
-        self.getCurrentLocation()
+        self.getCurrentLocation { [self] loc in
+            addressTxtView.text = loc
+        }
     }
     @IBAction func cityBtnOutlet(_ sender: UIButton) {
         print(#function)

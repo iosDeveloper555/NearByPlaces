@@ -75,7 +75,7 @@ extension RatingListVC:UITableViewDelegate,UITableViewDataSource
         
         cell.lblName.text = model.author_name
         cell.lblTime.text = model.relative_time_description
-        cell.lblAccountLink.text=""//model.author_url
+        cell.lblAccountLink.text=""
         cell.txtDesc.text = model.text
 
         let rating = Double(model.rating ?? 0)
@@ -85,7 +85,6 @@ extension RatingListVC:UITableViewDelegate,UITableViewDataSource
         cell.imgProfile.setImageFromRemoteUrl(type: .Google,url: model.profile_photo_url ?? kEmptyString)
         cell.selectedBackgroundView = bgColorView
         cell.btnAccLink.tag = indexPath.row
-      //  cell.btnAccLink.addTarget(self, action: #selector(openLink), for: UIControl.Event.touchUpInside)
         
         return cell
     }
@@ -181,6 +180,14 @@ extension RatingListVC
             self.ratingArray.append(model)
         }
         self.tableDetails.reloadData()
+        if (self.ratingArray.count==0)
+        {
+            self.showEmptyScreen()
+        }
+        else
+        {
+            self.hideEmptyScreen()
+        }
         
     }
 }

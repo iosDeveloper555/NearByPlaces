@@ -40,6 +40,8 @@ class CustomImagePickerView: NSObject {
     var maxZoom :CGFloat!
     var minZoom:CGFloat!
     
+    
+    
     func pickImageUsing(target: UIViewController, mode:PickerMode, showVideo: Bool = false) {
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
@@ -289,7 +291,10 @@ class CustomImagePickerView: NSObject {
         }
         scrollView.setZoomScale(scrollValue, animated: true)
     }
+    
+    
 }
+
 
 //MARK: Scroll View Delegate
 extension CustomImagePickerView: UIScrollViewDelegate {

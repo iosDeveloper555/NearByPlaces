@@ -259,6 +259,15 @@ extension ListVC
             else{
                 
                 let count = HomeVM.shared.homeUserList
+                if (count.count==0)
+                {
+                    self.showEmptyScreen()
+                }
+                else
+                {
+                    self.hideEmptyScreen()
+                }
+                
                 self.listTV.reloadData()
                 debugPrint("Total user count =  \(count.count)")
             }

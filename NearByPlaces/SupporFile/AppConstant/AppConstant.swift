@@ -148,7 +148,7 @@ let kValidPhoneAlert = "Please enter valid phone number."
 
 let kEmptyDOBAlert = "Please select date of birth."
 let kEmptyGenderAlert = "Please select gender."
-
+let kEmptyList = "No data found."
 
 
 //Cell

@@ -100,7 +100,16 @@ extension TopStarVC
                     {
                         self.topListDataArray.append(dict)
                     }
+                    
                     self.topStarTV.reloadData()
+                }
+                if (self.topListDataArray.count>0)
+                {
+                    self.hideEmptyScreen()
+                }
+                else
+                {
+                    self.showEmptyScreen()
                 }
             }
         })

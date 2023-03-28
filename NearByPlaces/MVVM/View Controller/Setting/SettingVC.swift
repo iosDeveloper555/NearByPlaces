@@ -37,7 +37,16 @@ class SettingVC: UIViewController {
         //self.settingArray.append(SettingModel(type: .Community,icon: UIImage(named: "Community")!))
         self.settingArray.append(SettingModel(type: .Rechtliches,icon: UIImage(named: "Community")!))
 
-        self.settingArray.append(SettingModel(type: .Logout,icon: UIImage(named: "loc")!))
+        if DataManager.userId != 0
+        {
+            self.settingArray.append(SettingModel(type: .Logout,icon: UIImage(named: "loc")!))
+
+        }
+        else
+        {
+            self.settingArray.append(SettingModel(type: .Login,icon: UIImage(named: "loc")!))
+
+        }
     }
 }
 
@@ -90,16 +99,16 @@ extension SettingVC:UITableViewDelegate,UITableViewDataSource
             let cell = tableView.dequeueReusableCell(withIdentifier: kSettingTCell) as! SettingTCell
             cell.lblTitle.text = model.type.rawValue
             
-            if model.type == .Chat || model.type == .Logout
+            if model.type == .Forum || model.type == .Berechtigungen
             {
-                cell.viewLine.isHidden=true
+                cell.viewLine.isHidden=false
             }
             else
             {
-                cell.viewLine.isHidden=false
+                cell.viewLine.isHidden=true
 
             }
-            if model.type == .Logout
+            if model.type == .Logout || model.type == .Login
             {
                 cell.constLeft.constant = 16+8
                 cell.imgIcon.isHidden=true
@@ -125,6 +134,10 @@ extension SettingVC:UITableViewDelegate,UITableViewDataSource
         if model.type == .Logout
         {
             SCENEDEL?.navigateToInto()
+        }
+        else if  model.type == .Login
+        {
+            SCENEDEL?.navigateToLogin()
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

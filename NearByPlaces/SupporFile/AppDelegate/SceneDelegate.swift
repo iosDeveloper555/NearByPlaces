@@ -66,6 +66,7 @@ extension SceneDelegate
 {
     func navigateToInto()
     {
+        DataManager.userId=0
         let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         let nav = UINavigationController(rootViewController: vc)

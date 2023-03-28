@@ -36,10 +36,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4Z-us-eWN">
-                                <rect key="frame" x="20" y="8" width="310" height="138"/>
+                                <rect key="frame" x="18" y="8" width="312" height="138"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do e" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ubB-Zm-S2N">
-                                        <rect key="frame" x="0.0" y="0.0" width="310" height="138"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="312" height="138"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" red="0.40784313725490196" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
@@ -61,7 +61,7 @@
                             <constraint firstItem="Ija-hc-T5S" firstAttribute="leading" secondItem="Ozl-c1-h5j" secondAttribute="leading" constant="20" symbolic="YES" id="FTI-wS-Y17"/>
                             <constraint firstItem="T4Z-us-eWN" firstAttribute="trailing" secondItem="Ija-hc-T5S" secondAttribute="trailing" id="Tx9-6o-sBr"/>
                             <constraint firstAttribute="trailing" secondItem="Ija-hc-T5S" secondAttribute="trailing" constant="20" id="azw-lz-OI6"/>
-                            <constraint firstItem="T4Z-us-eWN" firstAttribute="leading" secondItem="Ija-hc-T5S" secondAttribute="leading" id="gA9-f1-SJ4"/>
+                            <constraint firstItem="T4Z-us-eWN" firstAttribute="leading" secondItem="Ija-hc-T5S" secondAttribute="leading" constant="-2" id="gA9-f1-SJ4"/>
                             <constraint firstItem="Ija-hc-T5S" firstAttribute="top" secondItem="Ozl-c1-h5j" secondAttribute="top" id="kZw-Le-CNG"/>
                             <constraint firstItem="T4Z-us-eWN" firstAttribute="top" secondItem="Ozl-c1-h5j" secondAttribute="top" constant="8" id="tll-6m-KRg"/>
                         </constraints>

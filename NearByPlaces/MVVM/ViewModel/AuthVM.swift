@@ -73,14 +73,10 @@ extension APIManager {
 extension AuthVM
 {
   
-    func parseSignInData(response: JSONDictionary){
-        //if let data = response[ApiKey.kResponse] as? JSONDictionary
-       // {
-        
-            self.userData = ResponseModel(data: response)
-            
+    func parseSignInData(response: JSONDictionary)
+    {
+        self.userData = ResponseModel(data: response)
         DataManager.userId = self.userData?.response?.id ?? 0
-        //}
     }
           
 

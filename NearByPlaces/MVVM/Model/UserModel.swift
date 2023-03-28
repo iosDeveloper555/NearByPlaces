@@ -18,8 +18,14 @@ struct ResponseModel
         self.message =  data[ApiKey.kMessage] as? String
         self.status =  data[ApiKey.kStatus] as? Any
 
-        let user =  data[ApiKey.kResponse] as? JSONDictionary ?? [:]
-        self.response = UserModel(data: user)
+        let userArray =  data[ApiKey.kResponse] as? JSONArray ?? []
+        if userArray.count>0
+        {
+            let user =  userArray[0] as? JSONDictionary ?? [:]
+
+            self.response = UserModel(data: user)
+
+        }
         
     }
     

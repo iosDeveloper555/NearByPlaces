@@ -31,8 +31,26 @@ class BaseVC: UIViewController {
     var startDate: Date?
     var startShaking = CFAbsoluteTimeGetCurrent()
 
+    lazy var emptyview:EmptyScreenView = EmptyScreenView(image: self.imageForEmptyScreen, title: self.titleForEmptyScreen, description: self.descriptionForEmptyScreen)
+    //
+    @IBInspectable var imageForEmptyScreen:UIImage =  #imageLiteral(resourceName: "Intro1"){
+        didSet {
+            emptyview.imageView.image = imageForEmptyScreen
+        }
+    }
+    @IBInspectable var titleForEmptyScreen:String = kEmptyList {
+        didSet {
+            emptyview.titleLabel.text = titleForEmptyScreen.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
+    }
+    
+    @IBInspectable var descriptionForEmptyScreen:String = kEmptyList {
+        didSet {
+            emptyview.descriptionLabel.text = descriptionForEmptyScreen.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
+    }
 
-    //MARK:- Class Life Cycle
+    //MARK: - Class Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         datePickerView.locale = Locale(identifier: "en_US_POSIX")
@@ -182,7 +200,100 @@ class BaseVC: UIViewController {
         print(String(format: "%.01fkm", distance))
         return String(format: "%.01fkm", distance)
     }
+    func getCurrentLocation(complition:@escaping (String)->Void)
+    {
+        let geocoder = CLGeocoder()
+       let loc = CLLocation(latitude: CURRENTLAT, longitude: CURRENTLONG)
+        geocoder.reverseGeocodeLocation(loc) { (placemarksArray, error) in
+            var placemark:CLPlacemark!
+
+            if (placemarksArray?.count)! > 0 {
+                
+                /*
+                
+                placemark = placemarksArray![0] as! CLPlacemark
+
+                           var addressString : String = ""
+                if placemark.isoCountryCode == "TW" /*Address Format in Chinese*/ {
+                               if placemark.country != nil {
+                                   addressString = placemark.country ?? kEmptyString
+                               }
+                               if placemark.subAdministrativeArea != nil {
+                                   addressString = addressString + (placemark.subAdministrativeArea ?? kEmptyString) + ", "
+                               }
+                               if placemark.postalCode != nil {
+                                   addressString = addressString + (placemark.postalCode ?? kEmptyString) + " "
+                               }
+                               if placemark.locality != nil {
+                                   addressString = addressString + (placemark.locality ?? kEmptyString)
+                               }
+                               if placemark.thoroughfare != nil {
+                                   addressString = addressString + (placemark.thoroughfare ?? kEmptyString)
+                               }
+                               if placemark.subThoroughfare != nil {
+                                   addressString = addressString + (placemark.subThoroughfare ?? kEmptyString)
+                               }
+                           } else {
+                               if placemark.subThoroughfare != nil {
+                                   addressString = (placemark.subThoroughfare ?? kEmptyString) + " "
+                               }
+                               if placemark.thoroughfare != nil {
+                                   addressString = addressString + (placemark.thoroughfare ?? kEmptyString) + ", "
+                               }
+                               if placemark.postalCode != nil {
+                                   addressString = addressString + (placemark.postalCode ?? kEmptyString) + " "
+                               }
+                               if placemark.locality != nil {
+                                   addressString = addressString + (placemark.locality ?? kEmptyString) + ", "
+                               }
+                               if placemark.administrativeArea != nil {
+                                   addressString = addressString + (placemark.administrativeArea ?? kEmptyString) + " "
+                               }
+                               if placemark.country != nil {
+                                   addressString = addressString + (placemark.country ?? kEmptyString)
+                               }
+                           }
+
+                           print(addressString)
+                    */
+                
+               let add = (((placemarksArray?.first?.addressDictionary as! NSDictionary)["FormattedAddressLines"] as? NSArray)?.componentsJoined(by: ","))
+                complition(add ?? kEmptyString)
+                
+                debugPrint("address = \(placemarksArray)")
+                
+                
+                
+            }
+        }
+
+    }
     
+}
+//MARK: -  Hide/show empty view
+extension BaseVC
+{
+    //    //MARK: Empty Screen Implementation
+    func showEmptyScreen(belowSubview subview: UIView? = nil, superView:UIView? = nil,color:UIColor? = .black) {
+        let baseView: UIView = superView ?? self.view
+        emptyview.frame = CGRect(x: 0, y: 0, width: baseView.frame.width, height: baseView.frame.height)
+        emptyview.titleLabel.textColor = color
+        emptyview.descriptionLabel.textColor = color
+        self.view.isUserInteractionEnabled = true
+        emptyview.isUserInteractionEnabled = false
+        if let subview = subview {
+            baseView.insertSubview(emptyview, belowSubview: subview)
+        }
+        else {
+            
+            baseView.addSubview(emptyview)
+        }
+        baseView.backgroundColor=UIColor.red
+    }
+    
+    func hideEmptyScreen() {
+        emptyview.removeFromSuperview()
+    }
 }
 extension UIColor {
     //TO REMOVE THE NAVIGATION BAR LINE

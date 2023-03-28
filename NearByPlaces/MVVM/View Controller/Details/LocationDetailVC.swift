@@ -124,18 +124,22 @@ extension LocationDetailVC:UITableViewDelegate,UITableViewDataSource
     {
         
         let source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: CURRENTLAT, longitude: CURRENTLONG)))
-        source.name = "Source"
+        self.getCurrentLocation { location in
+            source.name = location
+            let lat = self.locationDetail?.latitude ?? "30.323"
+            let lang = self.locationDetail?.longitude ?? "76.323"
+            
+            let destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(lang)!)))
+            destination.name = self.locationDetail?.address ?? "Destination"
+                    
+            MKMapItem.openMaps(
+              with: [source, destination],
+              launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+            )
+
+        }
                 
-        let lat = locationDetail?.latitude ?? "30.323"
-        let lang = locationDetail?.longitude ?? "76.323"
-        
-        let destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(lang)!)))
-        destination.name = locationDetail?.address ?? "Destination"
-                
-        MKMapItem.openMaps(
-          with: [source, destination],
-          launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-        )
+      
     }
 
     
