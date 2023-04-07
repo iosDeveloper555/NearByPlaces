@@ -35,8 +35,8 @@ struct FilterType
 enum Filter:String
 {
     case TYPE_ALL =  "all"
-    case TYPE_BS =  "Bader & Saunen"
-    case TYPE_SS =  "Strande & Seen"
-    case TYPE_HC =  "Hotels  & Camping"
+    case TYPE_BS =  "1"//"Bader & Saunen"
+    case TYPE_SS =  "2"//"Strande & Seen"
+    case TYPE_HC =  "3"//"Hotels  & Camping"
 
 }

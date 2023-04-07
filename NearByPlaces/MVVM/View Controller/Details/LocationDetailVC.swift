@@ -76,6 +76,7 @@ extension LocationDetailVC:UITableViewDelegate,UITableViewDataSource
             cell.lblAddress.text = locationDetail?.filter
             cell.btnRating.addTarget(self, action: #selector(OpenRating), for: .touchUpInside)
             cell.btnNavigation.addTarget(self, action: #selector(OpenNavigation), for: .touchUpInside)
+            cell.btnWebLink.addTarget(self, action: #selector(OpenWebLink), for: .touchUpInside)
 
             return cell
         }
@@ -141,7 +142,19 @@ extension LocationDetailVC:UITableViewDelegate,UITableViewDataSource
                 
       
     }
+    //MARK: - OpenWebLink
+    @objc func OpenWebLink(_ sender:UIButton)
+    {
+        guard let requestUrl = NSURL(string: self.locationDetail?.url ?? kEmptyString) else {
+            return
+        }
 
+        UIApplication.shared.openURL(requestUrl as URL)
+        
+        
+    }
+
+    
     
     
 }

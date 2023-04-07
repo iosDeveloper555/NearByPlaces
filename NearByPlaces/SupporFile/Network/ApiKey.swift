@@ -41,5 +41,6 @@ class ApiKey {
     static let kLocation_image = "location image"
     static let kTop_ten = "top_ten"
     static let kDistance = "distance"
+    static let kUrl = "url"
 
 }

@@ -17,8 +17,10 @@ enum APIServicesHome:APIService {
         switch self {
        
         case .getHomeData:
-            path = BASE_URL.appending("get-data")
+            path = BASE_URL.appending("get")
             }
+   // https://placesnearbyme.a1professionals.net/api/get
+        
         return path
      }
     

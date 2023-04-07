@@ -10,6 +10,7 @@ import UIKit
 
 
 //MARK:- For testing
+
  let BASE_URL = "https://placesnearbyme.a1professionals.net/api/"
 let IMAGE_BASE_URL = "http://placesnearbyme.a1professionals.net/storage/"
 
@@ -33,9 +34,9 @@ var CURRENTLONG =  76.69104083
 var COUNTRYCODE =  Locale.current.regionCode
 
 var TYPE_ALL =  "all"
-var TYPE_BS =  "Bader & Saunen"
-var TYPE_SS =  "Strande & Seen"
-var TYPE_HC =  "Hotels  & Camping"
+var TYPE_BS =  "1"//"Bader & Saunen"
+var TYPE_SS =  "2"//"Strande & Seen"
+var TYPE_HC =  "3"//"Hotels  & Camping"
 
 var kSuccess = "success"
 
