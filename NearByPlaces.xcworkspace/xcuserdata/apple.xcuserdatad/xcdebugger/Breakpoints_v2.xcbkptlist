@@ -14,8 +14,8 @@
             filePath = "NearByPlaces/MVVM/View Controller/Details/LocationDetailVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "OpenNavigation(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "NearByPlaces/MVVM/View Controller/Details/LocationDetailVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "OpenNavigation(_:)"
             landmarkType = "7">
             <Locations>
@@ -765,8 +765,8 @@
             filePath = "NearByPlaces/MVVM/View Controller/Details/LocationDetailVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "OpenWebLink(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -781,8 +781,8 @@
             filePath = "NearByPlaces/MVVM/View Controller/Details/LocationDetailVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
             landmarkName = "OpenWebLink(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -797,8 +797,8 @@
             filePath = "NearByPlaces/MVVM/View Controller/Details/LocationDetailVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
             landmarkName = "OpenWebLink(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -813,8 +813,8 @@
             filePath = "NearByPlaces/MVVM/View Controller/Details/LocationDetailVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
             landmarkName = "OpenWebLink(_:)"
             landmarkType = "7">
          </BreakpointContent>

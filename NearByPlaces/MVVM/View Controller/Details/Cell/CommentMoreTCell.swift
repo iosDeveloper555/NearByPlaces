@@ -1,15 +1,15 @@
 //
-//  DetailHTCell.swift
+//  CommentMoreTCell.swift
 //  NearByPlaces
 //
-//  Created by Amarendra on 18/02/23.
+//  Created by Amarendra on 08/04/23.
 //
 
 import UIKit
 
-class DetailHTCell: UITableViewCell {
+class CommentMoreTCell: UITableViewCell {
 
-    @IBOutlet weak var imgDetails: UIImageView!
+    @IBOutlet weak var btnMoreComment: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,16 +21,4 @@ class DetailHTCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-}
-
-enum DetailCellType:CaseIterable
-{
-    case HeaderImage
-    case Title
-    case Description
-    case Comment
-    case MoreComment
-
-    case Review
-
 }

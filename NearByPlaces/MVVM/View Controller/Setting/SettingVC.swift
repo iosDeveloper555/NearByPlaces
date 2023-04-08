@@ -139,6 +139,17 @@ extension SettingVC:UITableViewDelegate,UITableViewDataSource
         {
             SCENEDEL?.navigateToLogin()
         }
+        else if  model.type == .Forum
+        {
+            let vc = ForumVC.instantiate(fromAppStoryboard: .Setting)
+             self.navigationController?.pushViewController(vc, animated: true)
+        }
+        else if  model.type == .Chat
+        {
+            let vc = ChatVC.instantiate(fromAppStoryboard: .Setting)
+             self.navigationController?.pushViewController(vc, animated: true)
+            
+        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         

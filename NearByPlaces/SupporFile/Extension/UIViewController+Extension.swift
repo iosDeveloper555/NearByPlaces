@@ -12,6 +12,7 @@ import UIKit
 enum AppStoryboard : String {
     case Main
     case Tabbar
+    case Setting
 
 }
 extension AppStoryboard {

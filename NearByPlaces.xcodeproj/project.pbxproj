@@ -17,7 +17,17 @@
 		1805CF9429D2E8D40037286A /* EmptyScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805CF9329D2E8D40037286A /* EmptyScreenView.swift */; };
 		1805CF9629D2E8DD0037286A /* EmptyScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1805CF9529D2E8DD0037286A /* EmptyScreenView.xib */; };
 		180EA20E29668978002D7691 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EA20D29668978002D7691 /* BaseVC.swift */; };
+		1813D0BC29E14266007B9D98 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1813D0BB29E14266007B9D98 /* Setting.storyboard */; };
+		1813D0BE29E146D4007B9D98 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813D0BD29E146D4007B9D98 /* ChatVC.swift */; };
+		1813D0C029E147AF007B9D98 /* ForumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813D0BF29E147AF007B9D98 /* ForumVC.swift */; };
 		18241C58296C48A2009A8510 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18241C57296C48A2009A8510 /* CustomTabBar.swift */; };
+		184929CB29E131A7004F9E02 /* CommentTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184929C929E131A7004F9E02 /* CommentTCell.swift */; };
+		184929CC29E131A7004F9E02 /* CommentTCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184929CA29E131A7004F9E02 /* CommentTCell.xib */; };
+		184929CF29E136DB004F9E02 /* CommentMoreTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184929CD29E136DB004F9E02 /* CommentMoreTCell.swift */; };
+		184929D029E136DB004F9E02 /* CommentMoreTCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184929CE29E136DB004F9E02 /* CommentMoreTCell.xib */; };
+		184929D229E138B9004F9E02 /* CommentListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184929D129E138B9004F9E02 /* CommentListVC.swift */; };
+		184929D529E13AB1004F9E02 /* ReviewTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184929D329E13AB1004F9E02 /* ReviewTCell.swift */; };
+		184929D629E13AB1004F9E02 /* ReviewTCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184929D429E13AB1004F9E02 /* ReviewTCell.xib */; };
 		184A2B5529716A1D009B7DD0 /* ProfileHeadetTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184A2B5329716A1C009B7DD0 /* ProfileHeadetTCell.swift */; };
 		184A2B5629716A1D009B7DD0 /* ProfileHeadetTCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184A2B5429716A1C009B7DD0 /* ProfileHeadetTCell.xib */; };
 		184C3FEA2965AC5E005ADE6D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C3FE32965AC5E005ADE6D /* Date+Extension.swift */; };
@@ -126,7 +136,17 @@
 		1805CF9329D2E8D40037286A /* EmptyScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyScreenView.swift; sourceTree = "<group>"; };
 		1805CF9529D2E8DD0037286A /* EmptyScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyScreenView.xib; sourceTree = "<group>"; };
 		180EA20D29668978002D7691 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		1813D0BB29E14266007B9D98 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		1813D0BD29E146D4007B9D98 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		1813D0BF29E147AF007B9D98 /* ForumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumVC.swift; sourceTree = "<group>"; };
 		18241C57296C48A2009A8510 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		184929C929E131A7004F9E02 /* CommentTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTCell.swift; sourceTree = "<group>"; };
+		184929CA29E131A7004F9E02 /* CommentTCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTCell.xib; sourceTree = "<group>"; };
+		184929CD29E136DB004F9E02 /* CommentMoreTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentMoreTCell.swift; sourceTree = "<group>"; };
+		184929CE29E136DB004F9E02 /* CommentMoreTCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentMoreTCell.xib; sourceTree = "<group>"; };
+		184929D129E138B9004F9E02 /* CommentListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListVC.swift; sourceTree = "<group>"; };
+		184929D329E13AB1004F9E02 /* ReviewTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTCell.swift; sourceTree = "<group>"; };
+		184929D429E13AB1004F9E02 /* ReviewTCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTCell.xib; sourceTree = "<group>"; };
 		184A2B5329716A1C009B7DD0 /* ProfileHeadetTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeadetTCell.swift; sourceTree = "<group>"; };
 		184A2B5429716A1C009B7DD0 /* ProfileHeadetTCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeadetTCell.xib; sourceTree = "<group>"; };
 		184C3FE32965AC5E005ADE6D /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -333,6 +353,7 @@
 				AA775578294C420800408072 /* LaunchScreen.storyboard */,
 				AA775573294C420500408072 /* Main.storyboard */,
 				184C40012965B870005ADE6D /* Tabbar.storyboard */,
+				1813D0BB29E14266007B9D98 /* Setting.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -388,7 +409,9 @@
 			isa = PBXGroup;
 			children = (
 				186A449629703DCD00D9FBE1 /* Cell */,
+				1813D0BF29E147AF007B9D98 /* ForumVC.swift */,
 				AA77558A294C80BF00408072 /* SettingVC.swift */,
+				1813D0BD29E146D4007B9D98 /* ChatVC.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -412,6 +435,7 @@
 				1884FD4429A0B93800FBDA71 /* Cell */,
 				AA81132A295041A3003DFCC5 /* LocationDetailVC.swift */,
 				18C3EF8729A3AE01002BD5BC /* RatingListVC.swift */,
+				184929D129E138B9004F9E02 /* CommentListVC.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -427,6 +451,12 @@
 				1884FD4E29A0BC1B00FBDA71 /* DetailDescTCell.xib */,
 				18C3EF8929A3AED3002BD5BC /* RatingListTCell.swift */,
 				18C3EF8A29A3AED3002BD5BC /* RatingListTCell.xib */,
+				184929C929E131A7004F9E02 /* CommentTCell.swift */,
+				184929CA29E131A7004F9E02 /* CommentTCell.xib */,
+				184929CD29E136DB004F9E02 /* CommentMoreTCell.swift */,
+				184929CE29E136DB004F9E02 /* CommentMoreTCell.xib */,
+				184929D329E13AB1004F9E02 /* ReviewTCell.swift */,
+				184929D429E13AB1004F9E02 /* ReviewTCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -695,6 +725,8 @@
 				18F6B7E12966901600403722 /* Montserrat-Italic.ttf in Resources */,
 				18E4739F29667C0B00982EED /* Inter-Light.ttf in Resources */,
 				18E473A429667C0B00982EED /* Inter-ExtraLight.ttf in Resources */,
+				184929CC29E131A7004F9E02 /* CommentTCell.xib in Resources */,
+				184929D029E136DB004F9E02 /* CommentMoreTCell.xib in Resources */,
 				1884FD5029A0BC1B00FBDA71 /* DetailDescTCell.xib in Resources */,
 				18E473A129667C0B00982EED /* Inter-Bold.ttf in Resources */,
 				18F6B7E02966901600403722 /* Montserrat-Regular.ttf in Resources */,
@@ -721,6 +753,7 @@
 				18E4739E29667C0B00982EED /* Inter-Medium.ttf in Resources */,
 				184C40002965AD50005ADE6D /* IntrollCCell.xib in Resources */,
 				184C40022965B870005ADE6D /* Tabbar.storyboard in Resources */,
+				184929D629E13AB1004F9E02 /* ReviewTCell.xib in Resources */,
 				18F6B7FA2966937600403722 /* Roboto-Bold.ttf in Resources */,
 				18F6B7F82966937600403722 /* Roboto-Italic.ttf in Resources */,
 				18E473A629667C0B00982EED /* Inter-SemiBold.ttf in Resources */,
@@ -741,6 +774,7 @@
 				18F6B7D92966901600403722 /* Montserrat-Bold.ttf in Resources */,
 				18E473A229667C0B00982EED /* Inter-Regular.ttf in Resources */,
 				18F6B7D32966901600403722 /* Montserrat-Medium.ttf in Resources */,
+				1813D0BC29E14266007B9D98 /* Setting.storyboard in Resources */,
 				18F6B7F42966937600403722 /* Roboto-MediumItalic.ttf in Resources */,
 				AA811331295064E8003DFCC5 /* TopStarTVCell.xib in Resources */,
 			);
@@ -816,14 +850,18 @@
 				1805465729BC653B0099280D /* UserModel.swift in Sources */,
 				AA775589294C80A900408072 /* LocationVC.swift in Sources */,
 				AA77558B294C80BF00408072 /* SettingVC.swift in Sources */,
+				184929CB29E131A7004F9E02 /* CommentTCell.swift in Sources */,
 				18BEEC1B299FC5F200B7F36E /* UIImage+Extension.swift in Sources */,
 				18BEEC19299FBA9200B7F36E /* HomeModel.swift in Sources */,
+				184929D529E13AB1004F9E02 /* ReviewTCell.swift in Sources */,
+				1813D0BE29E146D4007B9D98 /* ChatVC.swift in Sources */,
 				1884FD4B29A0B9FA00FBDA71 /* DetailTitleCell.swift in Sources */,
 				186A449D29704A6B00D9FBE1 /* LegalTCell.swift in Sources */,
 				18C3EF8829A3AE01002BD5BC /* RatingListVC.swift in Sources */,
 				1805CF9429D2E8D40037286A /* EmptyScreenView.swift in Sources */,
 				18BEEC14299FB46F00B7F36E /* ApiKey.swift in Sources */,
 				184C3FFF2965AD50005ADE6D /* IntrollCCell.swift in Sources */,
+				184929CF29E136DB004F9E02 /* CommentMoreTCell.swift in Sources */,
 				184C3FEB2965AC5E005ADE6D /* UIView+Extension.swift in Sources */,
 				AA81132F29504BD4003DFCC5 /* ListTVCell.swift in Sources */,
 				1805465529BC612C0099280D /* AuthVM.swift in Sources */,
@@ -842,6 +880,7 @@
 				184C3FEF2965AC5E005ADE6D /* AppConstant.swift in Sources */,
 				184A2B5529716A1D009B7DD0 /* ProfileHeadetTCell.swift in Sources */,
 				184C3FED2965AC5E005ADE6D /* String+Extension.swift in Sources */,
+				184929D229E138B9004F9E02 /* CommentListVC.swift in Sources */,
 				1805465329BC5FFC0099280D /* Auth+Webservices.swift in Sources */,
 				18C3EF8B29A3AED3002BD5BC /* RatingListTCell.swift in Sources */,
 				1805464C29BC4C220099280D /* SignInVC.swift in Sources */,
@@ -858,6 +897,7 @@
 				180EA20E29668978002D7691 /* BaseVC.swift in Sources */,
 				AA775587294C807400408072 /* TopStarVC.swift in Sources */,
 				18241C58296C48A2009A8510 /* CustomTabBar.swift in Sources */,
+				1813D0C029E147AF007B9D98 /* ForumVC.swift in Sources */,
 				AA775570294C420500408072 /* SceneDelegate.swift in Sources */,
 				18BEEC17299FB56100B7F36E /* Home+Webservices.swift in Sources */,
 				1805464E29BC4FA80099280D /* MyProfileVC.swift in Sources */,

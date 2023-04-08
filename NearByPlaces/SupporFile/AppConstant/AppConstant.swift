@@ -162,6 +162,9 @@ let kDetailTitleCell  = "DetailTitleCell"
 let kDetailHTCell  = "DetailHTCell"
 let kDetailDescTCell  = "DetailDescTCell"
 let kRatingListTCell  = "RatingListTCell"
+let kCommentTCell  = "CommentTCell"
+let kCommentMoreTCell  = "CommentMoreTCell"
+let kReviewTCell  = "ReviewTCell"
 
 
 

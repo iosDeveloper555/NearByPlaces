@@ -11,10 +11,11 @@ import UIKit
 
 class CustomTabBar: UITabBar {
         
-     override func awakeFromNib() {
-            super.awakeFromNib()
-//            layer.masksToBounds = true
-//         layer.cornerRadius = self.frame.height/2
-//            layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
-      }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        //            layer.masksToBounds = true
+        //         layer.cornerRadius = self.frame.height/2
+        //            layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        
+    }
  }
